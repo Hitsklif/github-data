@@ -22,7 +22,6 @@
 (def all_repo_counts (map #(get-count repo_count %) langs))
 (def bugs-per-repo (map #(float (/ %1 %2)) all_bug_counts all_repo_counts))
 
-
 (defn get-json [q]
   (-> q
       (client/get token)
@@ -34,20 +33,16 @@
        lang
        repo))
 
-(defn get-names [lang]
-  (map #(get % "full_name")
-       (-> (get-json (str repo_count lang "+forks:\">20\"&per_page=30"))
-           (get "items"))))
+(defn get-names
+  ([lang] (get-names lang 1))
+  ([lang num]
+   (map #(get % "full_name")
+        (-> (get-json (str repo_count lang "+forks:\">20\"&per_page=30&page=" num))
+            (get "items")))))
 
 (defn get-count-q [q]
   (-> (get-json q)
       (get "total_count")))
-
-(def csharpnames (get-names "csharp"))
-(def fsharpnames (get-names "fsharp"))
-(def cljnames (get-names "clojure"))
-(def jsnames (get-names "js"))
-(def coffeeenames (get-names "coffeescript"))
 
 (defn get-repo-names-for-lang [lang]
   (reduce str (map #(str "+repo:" %)
@@ -57,15 +52,24 @@
 ;; bugs-in-top  => >25 forks
 ;; ([149.3 1493/10 30] [19.466667 292/15 30] [14.766666 443/30 30] [125.36667 3761/30 30] [98.46667 1477/15 30])
 
-;; page=2&
-(def bugs-in-top 
-  (map #(let [names (get-names %)
-              counts (count names)
-              namesstr (reduce str (map (fn [x] (str "+repo:" x)) names))
-              ratio (/ (get-count-q (str bugs namesstr))
-                       counts)]
-          [(float ratio) ratio counts])
-       langs))
+(defn get-many-paged-bugs []
+  (let [bugs-in-top
+        (for [lang langs]
+          (reduce (fn [total page]
+                    (let [names (get-names lang page)
+                          counts (count names)
+                          namesstr (reduce str (map (fn [x] (str "+repo:" x)) names))
+                          bugcount (get-count-q (str bugs namesstr))]
+                      (assoc total
+                             :lang lang
+                             :bugs (+ (:bugs total) bugcount)
+                             :repos (+ (:repos total) counts))))
+                  {:bugs 0 :repos 0}
+                  (range 1 4)))]
+    (map #(assoc % :ratio (float (/ (:bugs %) (:repos %))))
+         bugs-in-top)))
+
+(def bugs-many-paged (get-many-paged-bugs))
 
 (defn make-test-queries [lang]
   (test-count lang (get-repo-names-for-lang lang)))
