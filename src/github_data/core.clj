@@ -77,8 +77,12 @@
 (map (comp int :ratio) bugs-many-paged)
 bugs-many-paged 
 
+(take 5 (map second  '(["csharp" 24] ["fsharp" 3] ["clojure" 2] ["js" 44] ["coffeescript" 23] ["scala" 10] ["php" 54] ["go" 22] ["java" 36] ["haskell" 11] ["ruby" 11] ["python" 18])))
+(24 3 2 44 23)
+;; extracted
 (["csharp" 24] ["fsharp" 3] ["clojure" 2] ["js" 44] ["coffeescript" 23] ["scala" 10] ["php" 54] ["go" 22] ["java" 36] ["haskell" 11] ["ruby" 11] ["python" 18])
-(sort-by second  '(["csharp" 24] ["fsharp" 3] ["clojure" 2] ["js" 44] ["coffeescript" 23] ["scala" 10] ["php" 54] ["go" 22] ["java" 36] ["haskell" 11] ["ruby" 11] ["python" 18]))
+;; sorted
+(["clojure" 2] ["fsharp" 3] ["scala" 10] ["haskell" 11] ["ruby" 11] ["python" 18] ["go" 22] ["coffeescript" 23] ["csharp" 24] ["java" 36] ["js" 44] ["php" 54])
 
 ({:ratio 24.506666, :lang "csharp", :bugs 3676, :repos 150} {:ratio 3.6190476, :lang "fsharp", :bugs 76, :repos 21} {:ratio 2.53211, :lang "clojure", :bugs 276, :repos 109} {:ratio 44.226665, :lang "js", :bugs 6634, :repos 150} {:ratio 23.373333, :lang "coffeescript", :bugs 3506, :repos 150} {:ratio 10.786667, :lang "scala", :bugs 1618, :repos 150} {:ratio 54.62, :lang "php", :bugs 8193, :repos 150} {:ratio 22.693333, :lang "go", :bugs 3404, :repos 150} {:ratio 36.633335, :lang "java", :bugs 5495, :repos 150} {:ratio 11.171429, :lang "haskell", :bugs 782, :repos 70} {:ratio 11.36, :lang "ruby", :bugs 1704, :repos 150} {:ratio 18.3, :lang "python", :bugs 2745, :repos 150})
 
