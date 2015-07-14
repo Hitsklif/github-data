@@ -76,17 +76,18 @@
 ;; (def bugs-many-paged (get-many-paged-bugs))
 
 (map
- (fn [lang-data]
+ (fn [lang-data name]
    (let [not-zero (filter #(not= 0 (first %)) lang-data)
-         sorted (sort-by first not-zero)
+         not-zero (sort-by first not-zero)
          repo-count (count not-zero)
-         not-zero (drop (int (/ repo-count 4)) sorted)
-         not-zero (take (int (/ repo-count 2)) sorted)
+         not-zero (drop (int (/ repo-count 4)) not-zero)
+         not-zero (take (int (/ repo-count 2)) not-zero)
          repo-count (count not-zero)
          bug-sum (reduce + (map first not-zero))
          ratio (float (/ bug-sum repo-count))]
-     {:bugs bug-sum :repos repo-count :ratio ratio}))
- bugs-many-paged)
+     {:name name :bugs bug-sum :repos repo-count :ratio ratio}))
+ bugs-many-paged
+ langs)
 
 
 (map (comp int :ratio) bugs-many-paged)
