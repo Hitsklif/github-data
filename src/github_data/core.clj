@@ -6,6 +6,7 @@
 
 (def repo_count  "https://api.github.com/search/repositories?q=language:")
 (def bug_count "https://api.github.com/search/issues?q=label:bug+language:")
+(def comitcounts "https://api.github.com/repos/")
 (def bugs "https://api.github.com/search/issues?q=label:bug+created:\"2013-01-01..2015-05-30\"")
 
 ;;(client/post "https://api.github.com/search/issues" (merge token {:label "bug"}))
@@ -50,11 +51,28 @@
   (reduce str (map #(str "+repo:" %)
                    (get-names lang))))
 
-(def t (get-repo-names-for-lang "fsharp"))
 
 ;; bugs-in-top  => >25 forks
 ;; ([149.3 1493/10 30] [19.466667 292/15 30] [14.766666 443/30 30] [125.36667 3761/30 30] [98.46667 1477/15 30])
 (def repo-names (atom {}))
+
+(defn get-repos-commit-data[repos]
+  (reduce (fn [sum repo]
+            (let [name (clojure.string/replace (second repo) "+repo:" "")
+                  url (str comitcounts name "/contributors")
+                  #_(Thread/sleep 4000)
+                  json (get-json url)
+                  contribs (map #(get % "contributions") json)
+                  commits (reduce + contribs)]
+              (+ sum commits)))
+          0
+          repos))
+
+(defn get-many-paged-commits []
+  (map get-repos-commit-counts bugs-many-paged))
+
+(def commits-time (get-many-paged-commits))
+
 
 (defn get-many-paged-bugs []
   (for [lang langs]
@@ -67,30 +85,74 @@
                            (let [bug-count (if (= counts 0) counts
                                                (get-count-q (str bugs namestr)))]
                              [bug-count namestr])) namesstrs)]
-      bugcounts))
-  #_(let [bugs-in-top 1]
-      (map #(assoc % :ratio (float (/ (:bugs %) (:repos %))))
-           bugs-in-top)))
+      bugcounts)))
 
 ;; dont reeval!
 ;; (def bugs-many-paged (get-many-paged-bugs))
-
-(map
- (fn [lang-data name]
-   (let [not-zero (filter #(not= 0 (first %)) lang-data)
-         not-zero (sort-by first not-zero)
-         repo-count (count not-zero)
-         not-zero (drop (int (/ repo-count 4)) not-zero)
-         not-zero (take (int (/ repo-count 2)) not-zero)
-         repo-count (count not-zero)
-         bug-sum (reduce + (map first not-zero))
-         ratio (float (/ bug-sum repo-count))]
-     {:name name :bugs bug-sum :repos repo-count :ratio ratio}))
- bugs-many-paged
- langs)
+(def bugs-many-paged (map (fn [eachs]
+                            (filter #(not= 0 (first %)) eachs))
+                          over-fifteen-forks))
 
 
-(map (comp int :ratio) bugs-many-paged)
+(defn take-interquartile [sort-fn coll]
+  (let [coll (sort-by sort-fn coll)
+        item-count (count coll)
+        coll (drop (int (/ item-count 4)) coll)
+        coll (take (int (/ item-count 2)) coll)]
+    coll))
+
+(def data-cleaned #_(sort-by :commitratio)
+  (map
+   (fn [lang-data name commitcounts]
+     (let [value-fn first
+           ;; remove records without data (not using bug tracker)
+           not-zero (filter #(not= 0 (value-fn %)) lang-data)
+           not-zero (take-interquartile value-fn not-zero)
+           repo-count (count not-zero)
+           bug-count (reduce + (map value-fn not-zero))
+           ratio (float (/ bug-count repo-count))
+           ratiocommits (int (* 10000 (/ bug-count commitcounts)))
+
+           ]
+       {:name name :bugs bug-count :repos repo-count :ratio ratio :commitratio ratiocommits :commits commitcounts}))
+   bugs-many-paged
+   langs
+   [76405 5901 22798 83930 57124 74539 87741 93680 112441 48726 101431 81765]))
+
+
+(map  (comp int :commitratio) data-cleaned)
+
+(
+ {:name "ruby"        ,:bugs 177,:repos 29,:ratio 6.1034484,:commitratio 17,:commits 101431}
+ {:name "haskell"     ,:bugs 115,:repos 22,:ratio 5.2272725,:commitratio 23,:commits 48726}
+
+ {:name "scala"       ,:bugs 227,:repos 30,:ratio 7.5666666,:commitratio 30,:commits 74539}
+ {:name "clojure"     ,:bugs 76,:repos 23,  :ratio 3.3043478,:commitratio 33,:commits 22798}
+ {:name "coffeescript",:bugs 203,:repos 27,:ratio 7.5185184,:commitratio 35,:commits 57124}
+
+ {:name "python"      ,:bugs 361,:repos 30,:ratio 12.033334,:commitratio 44,:commits 81765}
+ {:name "fsharp"      ,:bugs 27,:repos 6,  :ratio 4.5      ,:commitratio 45,:commits 5901}
+ {:name "go"          ,:bugs 452,:repos 33,:ratio 13.69697 ,:commitratio 48,:commits 93680}
+
+ {:name "java"        ,:bugs 676,:repos 29,:ratio 23.310345,:commitratio 60,:commits 112441}
+ {:name "csharp"      ,:bugs 483,:repos 31,:ratio 15.580646,:commitratio 63,:commits 76405}
+ {:name "php"         ,:bugs 574,:repos 26,:ratio 22.076923,:commitratio 65,:commits 87741}
+
+ {:name "js"          ,:bugs 1037,:repos 35,:ratio 29.62857,:commitratio 123,:commits 83930}
+ )
+
+
+
+(defn toR [col]
+  (str "(" (clojure.string/join "," col) ")"))
+
+(toR [15 4 3 29 7 7 22 13 23 5 6 12])
+
+(toR '(63 45 33 123 35 30 65 48 60 23 17 44))
+
+
+data-cleaned
+
 bugs-many-paged
 
 ;; filter for activity !!!
