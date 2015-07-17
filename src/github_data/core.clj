@@ -56,7 +56,7 @@
 ;; ([149.3 1493/10 30] [19.466667 292/15 30] [14.766666 443/30 30] [125.36667 3761/30 30] [98.46667 1477/15 30])
 (def repo-names (atom {}))
 
-(defn get-repos-commit-data[repos]
+(defn get-repos-commit-counts [repos]
   (reduce (fn [sum repo]
             (let [name (clojure.string/replace (second repo) "+repo:" "")
                   url (str comitcounts name "/contributors")
@@ -68,11 +68,11 @@
           0
           repos))
 
+(def bugs-many-paged [])
 (defn get-many-paged-commits []
   (map get-repos-commit-counts bugs-many-paged))
 
-(def commits-time (get-many-paged-commits))
-
+;; (def commits-time (get-many-paged-commits))
 
 (defn get-many-paged-bugs []
   (for [lang langs]
@@ -101,28 +101,86 @@
         coll (take (int (/ item-count 2)) coll)]
     coll))
 
-(def data-cleaned #_(sort-by :commitratio)
+(defn get-test-data [repo lang type]
+  (if (or (.contains repo "Test") (.contains repo "test")) 0
+      (get (get-json
+             (str "https://api.github.com/search/code?q="
+                  type "+in:filename+language:" lang repo "&per_page=1"))
+           "total_count")))
+
+(def just-bugs
   (map
-   (fn [lang-data name commitcounts]
+   (fn [lang-data lang]
      (let [value-fn first
            ;; remove records without data (not using bug tracker)
            not-zero (filter #(not= 0 (value-fn %)) lang-data)
            not-zero (take-interquartile value-fn not-zero)
-           repo-count (count not-zero)
-           bug-count (reduce + (map value-fn not-zero))
-           ratio (float (/ bug-count repo-count))
-           ratiocommits (int (* 10000 (/ bug-count commitcounts)))
-
-           ]
-       {:name name :bugs bug-count :repos repo-count :ratio ratio :commitratio ratiocommits :commits commitcounts}))
-   bugs-many-paged
+           ;; repo-names (map second not-zero)
+           test-counts (map (fn [[bug-count repo]]
+                              (Thread/sleep 4000)
+                              {:tests (get-test-data repo lang "test")
+                               :bugs bug-count
+                               :repo repo}) not-zero)]
+       test-counts))
+   over-fifteen-forks
+   ;; [(take 10 (first ))]
    langs
-   [76405 5901 22798 83930 57124 74539 87741 93680 112441 48726 101431 81765]))
+   ))
+;; just-bugs
 
 
-(map  (comp int :commitratio) data-cleaned)
+;; (first (second over-fifteen-forks))
+;;(get-test-data (second (first (second over-fifteen-forks))) "fsharp" "test")
 
-(
+
+ "+repo:twitter/secureheaders"
+
+(def data-cleaned
+  (sort-by :testavg
+           (map
+            (fn [lang-data name tests commitcounts]
+              (let [value-fn first
+                    ;; remove records without data (not using bug tracker)
+                    not-zero (filter #(not= 0 (value-fn %)) lang-data)
+                    not-zero (take-interquartile value-fn not-zero)
+                    repo-count (count not-zero)
+                    bug-count (reduce + (map value-fn not-zero))
+                    ratio (float (/ bug-count repo-count))
+                    ratiocommits (int (* 10000 (/ bug-count commitcounts)))
+                    testspercommit (float (* 10000 (/ tests commitcounts)))
+                    ]
+                {:name name :tests tests :bugs bug-count :repos repo-count :ratio ratio :testavg testspercommit :commitratio ratiocommits :commits commitcounts}))
+            ;;bugs-many-paged
+            over-fifteen-forks
+            langs
+            [3320 79 157 724 125 1144 519 851 2277 391 596 2980]
+            [76405 5901 22798 83930 57124 74539 87741 93680 112441 48726 101431 81765])))
+
+
+;; (map #(reduce + (map :tests %)) over-fifteen-forks-bugs-tests)
+
+
+;; (map  (comp int :commitratio) data-cleaned)
+;; data-cleaned
+(def sorted
+  (list
+   {:name "clojure",      :bugs 76, :repos 23, :ratio 3, :commitratio 33, :commits 22798}
+   {:name "fsharp"    ,   :bugs 27, :repos 6, :ratio 4, :commitratio 45, :commits 5901}
+   {:name "haskell",      :bugs 115, :repos 22, :ratio 5, :commitratio 23, :commits 48726}
+   {:name "ruby",         :bugs 177, :repos 29, :ratio 6, :commitratio 17, :commits 101431}
+   {:name "coffeescript", :bugs 203, :repos 27, :ratio 7, :commitratio 35, :commits 57124}
+   {:name "scala",        :bugs 227, :repos 30, :ratio 7, :commitratio 30, :commits 74539}
+   {:name "python",       :bugs 361, :repos 30, :ratio 12, :commitratio 44, :commits 81765}
+   {:name "go",           :bugs 452, :repos 33, :ratio 13, :commitratio 48, :commits 93680}
+   {:name "csharp",       :bugs 483, :repos 31, :ratio 15, :commitratio 63, :commits 76405}
+   {:name "php",          :bugs 574, :repos 26, :ratio 22, :commitratio 65, :commits 87741}
+   {:name "java",         :bugs 676, :repos 29, :ratio 23, :commitratio 60, :commits 112441}
+   {:name "js",           :bugs 1037, :repos 35, :ratio 29, :commitratio 123, :commits 83930}))
+
+;; (int (/ (reduce + (map :commitratio sorted)) (count sorted)))
+
+
+(list
  {:name "ruby"        ,:bugs 177,:repos 29,:ratio 6.1034484,:commitratio 17,:commits 101431}
  {:name "haskell"     ,:bugs 115,:repos 22,:ratio 5.2272725,:commitratio 23,:commits 48726}
 
@@ -143,21 +201,21 @@
 
 
 
-(defn toR [col]
-  (str "(" (clojure.string/join "," col) ")"))
+;; (defn toR [col]
+;;   (str "(" (clojure.string/join "," col) ")"))
 
-(toR [15 4 3 29 7 7 22 13 23 5 6 12])
+;; (toR [15 4 3 29 7 7 22 13 23 5 6 12])
 
-(toR '(63 45 33 123 35 30 65 48 60 23 17 44))
+;; (toR (list 63 45 33 123 35 30 65 48 60 23 17 44))
 
 
-data-cleaned
+;; data-cleaned
 
-bugs-many-paged
+;; bugs-many-paged
 
 ;; filter for activity !!!
 
-(take 5 (map second  '(["csharp" 24] ["fsharp" 3] ["clojure" 2] ["js" 44] ["coffeescript" 23] ["scala" 10] ["php" 54] ["go" 22] ["java" 36] ["haskell" 11] ["ruby" 11] ["python" 18])))
+;;(take 5 (map second  (list ["csharp" 24] ["fsharp" 3] ["clojure" 2] ["js" 44] ["coffeescript" 23] ["scala" 10] ["php" 54] ["go" 22] ["java" 36] ["haskell" 11] ["ruby" 11] ["python" 18])))
 (24 3 2 44 23)
 ;; extracted
 (["csharp" 24] ["fsharp" 3] ["clojure" 2] ["js" 44] ["coffeescript" 23] ["scala" 10] ["php" 54] ["go" 22] ["java" 36] ["haskell" 11] ["ruby" 11] ["python" 18])
@@ -169,41 +227,41 @@ bugs-many-paged
 (map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
 
 
-({:ratio 32.493332, :lang "csharp", :bugs 4874, :repos 150} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 3.360294, :lang "clojure", :bugs 457, :repos 136} {:ratio 42.366665, :lang "js", :bugs 6355, :repos 150} {:ratio 23.38, :lang "coffeescript", :bugs 3507, :repos 150} {:ratio 11.973333, :lang "scala", :bugs 1796, :repos 150} {:ratio 54.326668, :lang "php", :bugs 8149, :repos 150} {:ratio 28.386667, :lang "go", :bugs 4258, :repos 150} {:ratio 35.246666, :lang "java", :bugs 5287, :repos 150} {:ratio 12.229167, :lang "haskell", :bugs 1174, :repos 96} {:ratio 9.526667, :lang "ruby", :bugs 1429, :repos 150} {:ratio 21.206667, :lang "python", :bugs 3181, :repos 150})
+(list {:ratio 32.493332, :lang "csharp", :bugs 4874, :repos 150} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 3.360294, :lang "clojure", :bugs 457, :repos 136} {:ratio 42.366665, :lang "js", :bugs 6355, :repos 150} {:ratio 23.38, :lang "coffeescript", :bugs 3507, :repos 150} {:ratio 11.973333, :lang "scala", :bugs 1796, :repos 150} {:ratio 54.326668, :lang "php", :bugs 8149, :repos 150} {:ratio 28.386667, :lang "go", :bugs 4258, :repos 150} {:ratio 35.246666, :lang "java", :bugs 5287, :repos 150} {:ratio 12.229167, :lang "haskell", :bugs 1174, :repos 96} {:ratio 9.526667, :lang "ruby", :bugs 1429, :repos 150} {:ratio 21.206667, :lang "python", :bugs 3181, :repos 150})
 
 
 
 
-(map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
+;;(map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
 
 ;; 2013-now
-(["csharp" 37] ["fsharp" 25] ["clojure" 4] ["js" 41] ["coffeescript" 13] ["scala" 11] ["php" 17] ["go" 25] ["java" 18] ["haskell" 15] ["ruby" 6] ["python" 16])
-({:ratio 37.073334, :lang "csharp", :bugs 5561, :repos 150} {:ratio 25.714285, :lang "fsharp", :bugs 540, :repos 21} {:ratio 4.56962, :lang "clojure", :bugs 361, :repos 79} {:ratio 41.98, :lang "js", :bugs 6297, :repos 150} {:ratio 13.12, :lang "coffeescript", :bugs 1968, :repos 150} {:ratio 11.793333, :lang "scala", :bugs 1769, :repos 150} {:ratio 17.853333, :lang "php", :bugs 2678, :repos 150} {:ratio 25.92, :lang "go", :bugs 3888, :repos 150} {:ratio 18.973333, :lang "java", :bugs 2846, :repos 150} {:ratio 15.888889, :lang "haskell", :bugs 858, :repos 54} {:ratio 6.4466667, :lang "ruby", :bugs 967, :repos 150} {:ratio 16.813334, :lang "python", :bugs 2522, :repos 150})
+(list ["csharp" 37] ["fsharp" 25] ["clojure" 4] ["js" 41] ["coffeescript" 13] ["scala" 11] ["php" 17] ["go" 25] ["java" 18] ["haskell" 15] ["ruby" 6] ["python" 16])
+(list {:ratio 37.073334, :lang "csharp", :bugs 5561, :repos 150} {:ratio 25.714285, :lang "fsharp", :bugs 540, :repos 21} {:ratio 4.56962, :lang "clojure", :bugs 361, :repos 79} {:ratio 41.98, :lang "js", :bugs 6297, :repos 150} {:ratio 13.12, :lang "coffeescript", :bugs 1968, :repos 150} {:ratio 11.793333, :lang "scala", :bugs 1769, :repos 150} {:ratio 17.853333, :lang "php", :bugs 2678, :repos 150} {:ratio 25.92, :lang "go", :bugs 3888, :repos 150} {:ratio 18.973333, :lang "java", :bugs 2846, :repos 150} {:ratio 15.888889, :lang "haskell", :bugs 858, :repos 54} {:ratio 6.4466667, :lang "ruby", :bugs 967, :repos 150} {:ratio 16.813334, :lang "python", :bugs 2522, :repos 150})
 
 ;; 2013 - now
 
-(map (comp #(- 0 %) :ratio) bugs-many-paged)
+;; (map (comp #(- 0 %) :ratio) bugs-many-paged)
 
-(["csharp" 32] ["fsharp" 20] ["clojure" 3] ["js" 44] ["coffeescript" 23] ["scala" 11] ["php" 54] ["go" 28] ["java" 35] ["haskell" 12] ["ruby" 9] ["python" 21])
-(["clojure" 3] ["ruby" 9] ["scala" 11] ["haskell" 12] ["fsharp" 20] ["python" 21] ["coffeescript" 23] ["go" 28] ["csharp" 32] ["java" 35] ["js" 44] ["php" 54])
-({:ratio 32.493332, :lang "csharp", :bugs 4874, :repos 150} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 3.3851852, :lang "clojure", :bugs 457, :repos 135} {:ratio 44.633335, :lang "js", :bugs 6695, :repos 150} {:ratio 23.38, :lang "coffeescript", :bugs 3507, :repos 150} {:ratio 11.973333, :lang "scala", :bugs 1796, :repos 150} {:ratio 54.32, :lang "php", :bugs 8148, :repos 150} {:ratio 28.386667, :lang "go", :bugs 4258, :repos 150} {:ratio 35.246666, :lang "java", :bugs 5287, :repos 150} {:ratio 12.260417, :lang "haskell", :bugs 1177, :repos 96} {:ratio 9.493333, :lang "ruby", :bugs 1424, :repos 150} {:ratio 21.206667, :lang "python", :bugs 3181, :repos 150})
-(map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
+(list ["csharp" 32] ["fsharp" 20] ["clojure" 3] ["js" 44] ["coffeescript" 23] ["scala" 11] ["php" 54] ["go" 28] ["java" 35] ["haskell" 12] ["ruby" 9] ["python" 21])
+(list ["clojure" 3] ["ruby" 9] ["scala" 11] ["haskell" 12] ["fsharp" 20] ["python" 21] ["coffeescript" 23] ["go" 28] ["csharp" 32] ["java" 35] ["js" 44] ["php" 54])
+(list {:ratio 32.493332, :lang "csharp", :bugs 4874, :repos 150} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 3.3851852, :lang "clojure", :bugs 457, :repos 135} {:ratio 44.633335, :lang "js", :bugs 6695, :repos 150} {:ratio 23.38, :lang "coffeescript", :bugs 3507, :repos 150} {:ratio 11.973333, :lang "scala", :bugs 1796, :repos 150} {:ratio 54.32, :lang "php", :bugs 8148, :repos 150} {:ratio 28.386667, :lang "go", :bugs 4258, :repos 150} {:ratio 35.246666, :lang "java", :bugs 5287, :repos 150} {:ratio 12.260417, :lang "haskell", :bugs 1177, :repos 96} {:ratio 9.493333, :lang "ruby", :bugs 1424, :repos 150} {:ratio 21.206667, :lang "python", :bugs 3181, :repos 150})
+;; (map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
 
 
 ;; 90 many langs
-({:ratio 44.744446, :lang "csharp", :bugs 4027, :repos 90} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 4.3, :lang "clojure", :bugs 387, :repos 90} {:ratio 46.455555, :lang "js", :bugs 4181, :repos 90} {:ratio 29.777779, :lang "coffeescript", :bugs 2680, :repos 90} {:ratio 16.722221, :lang "scala", :bugs 1505, :repos 90} {:ratio 83.23333, :lang "php", :bugs 7491, :repos 90} {:ratio 42.41111, :lang "go", :bugs 3817, :repos 90} {:ratio 24.48889, :lang "java", :bugs 2204, :repos 90} {:ratio 12.588889, :lang "haskell", :bugs 1133, :repos 90} {:ratio 10.611111, :lang "ruby", :bugs 955, :repos 90} {:ratio 21.977777, :lang "python", :bugs 1978, :repos 90})
-(map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
+;; ({:ratio 44.744446, :lang "csharp", :bugs 4027, :repos 90} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 4.3, :lang "clojure", :bugs 387, :repos 90} {:ratio 46.455555, :lang "js", :bugs 4181, :repos 90} {:ratio 29.777779, :lang "coffeescript", :bugs 2680, :repos 90} {:ratio 16.722221, :lang "scala", :bugs 1505, :repos 90} {:ratio 83.23333, :lang "php", :bugs 7491, :repos 90} {:ratio 42.41111, :lang "go", :bugs 3817, :repos 90} {:ratio 24.48889, :lang "java", :bugs 2204, :repos 90} {:ratio 12.588889, :lang "haskell", :bugs 1133, :repos 90} {:ratio 10.611111, :lang "ruby", :bugs 955, :repos 90} {:ratio 21.977777, :lang "python", :bugs 1978, :repos 90})
+;; (map (fn [lang] [(:lang lang) (-> lang :ratio int )]) bugs-many-paged)
 
 
 
 ;; repos and issues since 2012
-({:ratio 32.493332, :lang "csharp", :bugs 4874, :repos 150} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 3.3851852, :lang "clojure", :bugs 457, :repos 135} {:ratio 44.633335, :lang "js", :bugs 6695, :repos 150} {:ratio 23.38, :lang "coffeescript", :bugs 3507, :repos 150} {:ratio 11.973333, :lang "scala", :bugs 1796, :repos 150} {:ratio 55.52, :lang "php", :bugs 8328, :repos 150})
+(list {:ratio 32.493332, :lang "csharp", :bugs 4874, :repos 150} {:ratio 20.25926, :lang "fsharp", :bugs 547, :repos 27} {:ratio 3.3851852, :lang "clojure", :bugs 457, :repos 135} {:ratio 44.633335, :lang "js", :bugs 6695, :repos 150} {:ratio 23.38, :lang "coffeescript", :bugs 3507, :repos 150} {:ratio 11.973333, :lang "scala", :bugs 1796, :repos 150} {:ratio 55.52, :lang "php", :bugs 8328, :repos 150})
 
 ;; issues in two year span 2012-2014
-({:ratio 10.906667, :lang "csharp", :bugs 1636, :repos 150} {:ratio 0.85714287, :lang "fsharp", :bugs 18, :repos 21} {:ratio 1.3981482, :lang "clojure", :bugs 151, :repos 108} {:ratio 14.886666, :lang "js", :bugs 2233, :repos 150} {:ratio 5.48, :lang "coffeescript", :bugs 822, :repos 150} {:ratio 2.3466666, :lang "scala", :bugs 352, :repos 150} {:ratio 20.86, :lang "php", :bugs 3129, :repos 150})
+(list {:ratio 10.906667, :lang "csharp", :bugs 1636, :repos 150} {:ratio 0.85714287, :lang "fsharp", :bugs 18, :repos 21} {:ratio 1.3981482, :lang "clojure", :bugs 151, :repos 108} {:ratio 14.886666, :lang "js", :bugs 2233, :repos 150} {:ratio 5.48, :lang "coffeescript", :bugs 822, :repos 150} {:ratio 2.3466666, :lang "scala", :bugs 352, :repos 150} {:ratio 20.86, :lang "php", :bugs 3129, :repos 150})
 
 ;; repos in two year span 2012-2014
-({:ratio 27.22, :lang "csharp", :bugs 4083, :repos 150} {:ratio 236412.9, :lang "fsharp", :bugs 4964671, :repos 21} {:ratio 11495.037, :lang "clojure", :bugs 1241464, :repos 108} {:ratio 48.6, :lang "js", :bugs 7290, :repos 150} {:ratio 24.8, :lang "coffeescript", :bugs 3720, :repos 150} {:ratio 11.946667, :lang "scala", :bugs 1792, :repos 150} {:ratio 63.926666, :lang "php", :bugs 9589, :repos 150})
+(list {:ratio 27.22, :lang "csharp", :bugs 4083, :repos 150} {:ratio 236412.9, :lang "fsharp", :bugs 4964671, :repos 21} {:ratio 11495.037, :lang "clojure", :bugs 1241464, :repos 108} {:ratio 48.6, :lang "js", :bugs 7290, :repos 150} {:ratio 24.8, :lang "coffeescript", :bugs 3720, :repos 150} {:ratio 11.946667, :lang "scala", :bugs 1792, :repos 150} {:ratio 63.926666, :lang "php", :bugs 9589, :repos 150})
 
 
 ;; 150 each
