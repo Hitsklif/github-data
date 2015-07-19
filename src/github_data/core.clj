@@ -101,12 +101,18 @@
         coll (take (int (/ item-count 2)) coll)]
     coll))
 
-(defn get-test-data [repo lang type]
-  (if (or (.contains repo "Test") (.contains repo "test")) 0
-      (get (get-json
-             (str "https://api.github.com/search/code?q="
-                  type "+in:filename+language:" lang repo "&per_page=1"))
-           "total_count")))
+(defn get-test-data [repo lang file-search]
+  (try
+    (if (or (.contains repo "Test") (.contains repo "test")) 0
+        (get (get-json
+              (str "https://api.github.com/search/code?q="
+                   (reduce #(str %1 "+filename:" %2) "" file-search)
+                   "+language:" lang repo "&per_page=1"))
+             "total_count"))
+    (catch Exception e 0)
+    ))
+
+;; (get-json "https://api.github.com/search/code?q=+filename:spec+filename:test+language:clojure+repo:james-henderson/chord&per_page=1")
 
 (def just-bugs
   (map
@@ -118,47 +124,55 @@
            ;; repo-names (map second not-zero)
            test-counts (map (fn [[bug-count repo]]
                               (Thread/sleep 4000)
-                              {:tests (get-test-data repo lang "test")
+                              {:tests (get-test-data repo lang ["spec" "test"])
                                :bugs bug-count
                                :repo repo}) not-zero)]
        test-counts))
    over-fifteen-forks
-   ;; [(take 10 (first ))]
    langs
    ))
-;; just-bugs
-
-
-;; (first (second over-fifteen-forks))
-;;(get-test-data (second (first (second over-fifteen-forks))) "fsharp" "test")
-
-
- "+repo:twitter/secureheaders"
+;;just-bugs
 
 (def data-cleaned
-  (sort-by :testavg
-           (map
-            (fn [lang-data name tests commitcounts]
-              (let [value-fn first
-                    ;; remove records without data (not using bug tracker)
-                    not-zero (filter #(not= 0 (value-fn %)) lang-data)
-                    not-zero (take-interquartile value-fn not-zero)
-                    repo-count (count not-zero)
-                    bug-count (reduce + (map value-fn not-zero))
-                    ratio (float (/ bug-count repo-count))
-                    ratiocommits (int (* 10000 (/ bug-count commitcounts)))
-                    testspercommit (float (* 10000 (/ tests commitcounts)))
-                    ]
-                {:name name :tests tests :bugs bug-count :repos repo-count :ratio ratio :testavg testspercommit :commitratio ratiocommits :commits commitcounts}))
-            ;;bugs-many-paged
-            over-fifteen-forks
-            langs
-            [3320 79 157 724 125 1144 519 851 2277 391 596 2980]
-            [76405 5901 22798 83930 57124 74539 87741 93680 112441 48726 101431 81765])))
+  #_(sort-by :testavg)
+  (map
+   (fn [lang-data name tests commitcounts]
+     (let [value-fn first
+           ;; remove records without data (not using bug tracker)
+           not-zero (filter #(not= 0 (value-fn %)) lang-data)
+           not-zero (take-interquartile value-fn not-zero)
+           repo-count (count not-zero)
+           bug-count (reduce + (map value-fn not-zero))
+           ratio (float (/ bug-count repo-count))
+           ratiocommits (int (* 10000 (/ bug-count commitcounts)))
+           testspercommit (int (* 10000 (/ tests commitcounts)))
+           ]
+       {:name name :tests tests :bugs bug-count :repos repo-count :ratio ratio :testcommits testspercommit :bugcommits ratiocommits :commits commitcounts}))
+   ;;bugs-many-paged
+   over-fifteen-forks
+   langs
+   [169 7 45 206 46 730 414 811 1707 69 569 801]
+   [76405 5901 22798 83930 57124 74539 87741 93680 112441 48726 101431 81765]))
 
+;; (map :testavg data-cleaned)
 
-;; (map #(reduce + (map :tests %)) over-fifteen-forks-bugs-tests)
+(defn toR [col]
+  (str "(" (clojure.string/join "," col) ")"))
 
+(defn get-r-lang-data [type]
+  (str  "s <- c(" (reduce str (map :bugcommits data-cleaned)) ")"))
+
+(get-r-lang-data "bugcommits")
+
+(defn get-r-field-data [type]
+  (map (fn [lang name]
+         (str name type " <- c(" (-> (map (keyword type) lang) toR) ")"))
+       over-fifteen-forks-bugs-tests
+       langs))
+
+(get-r-field-data "bugs")
+(get-r-field-data "tests")
+(reduce str (map #(str "cor(" % "bugs, " % "tests)") langs))
 
 ;; (map  (comp int :commitratio) data-cleaned)
 ;; data-cleaned
