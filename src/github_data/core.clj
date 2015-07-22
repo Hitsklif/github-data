@@ -160,7 +160,7 @@
   (str "(" (clojure.string/join "," col) ")"))
 
 (defn get-r-lang-data [type]
-  (str  "s <- c(" (reduce str (map :bugcommits data-cleaned)) ")"))
+  (str  "s <- c" (toR (map :bugcommits data-cleaned))))
 
 (get-r-lang-data "bugcommits")
 
