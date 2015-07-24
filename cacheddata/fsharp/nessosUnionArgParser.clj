@@ -1,0 +1,1 @@
+{:bugs 0, :commits 129, :tests 0, :repoqry "+repo:nessos/UnionArgParser", :name "nessos/UnionArgParser"}

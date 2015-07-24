@@ -1,0 +1,1 @@
+{:bugs 0, :commits 507, :tests 62, :repoqry "+repo:nvbn/thefuck", :name "nvbn/thefuck"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 110, :tests 28, :repoqry "+repo:xing/wysihtml5", :name "xing/wysihtml5"}

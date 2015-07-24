@@ -1,0 +1,1 @@
+{:bugs 6, :commits 162, :tests 0, :repoqry "+repo:artursapek/mondrian", :name "artursapek/mondrian"}

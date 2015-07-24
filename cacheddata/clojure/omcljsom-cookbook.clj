@@ -1,0 +1,1 @@
+{:bugs 0, :commits 74, :tests 0, :repoqry "+repo:omcljs/om-cookbook", :name "omcljs/om-cookbook"}

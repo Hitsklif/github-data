@@ -1,0 +1,1 @@
+{:bugs 17, :commits 1046, :tests 0, :repoqry "+repo:jstedfast/MailKit", :name "jstedfast/MailKit"}

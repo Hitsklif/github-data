@@ -1,0 +1,1 @@
+{:bugs 0, :commits 37, :tests 0, :repoqry "+repo:sergey-tihon/Stanford.NLP.Fsharp", :name "sergey-tihon/Stanford.NLP.Fsharp"}

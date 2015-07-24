@@ -1,0 +1,1 @@
+{:bugs 7, :commits 102, :tests 0, :repoqry "+repo:quantifind/KafkaOffsetMonitor", :name "quantifind/KafkaOffsetMonitor"}

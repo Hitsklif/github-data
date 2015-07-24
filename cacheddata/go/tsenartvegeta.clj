@@ -1,0 +1,1 @@
+{:bugs 1, :commits 244, :tests 6, :repoqry "+repo:tsenart/vegeta", :name "tsenart/vegeta"}

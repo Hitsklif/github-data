@@ -1,0 +1,1 @@
+{:bugs 27, :commits 925, :tests 18, :repoqry "+repo:NoamB/sorcery", :name "NoamB/sorcery"}

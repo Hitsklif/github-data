@@ -1,0 +1,1 @@
+{:bugs 0, :commits 70, :tests 7, :repoqry "+repo:jepst/CloudHaskell", :name "jepst/CloudHaskell"}

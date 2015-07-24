@@ -1,0 +1,1 @@
+{:bugs 261, :commits 6658, :tests 216, :repoqry "+repo:libgdx/libgdx", :name "libgdx/libgdx"}

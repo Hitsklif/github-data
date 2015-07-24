@@ -1,0 +1,1 @@
+{:bugs 0, :commits 31, :tests 7, :repoqry "+repo:golang/groupcache", :name "golang/groupcache"}

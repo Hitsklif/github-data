@@ -1,0 +1,1 @@
+{:bugs 0, :commits 11444, :tests 1285, :repoqry "+repo:GoogleCloudPlatform/kubernetes", :name "GoogleCloudPlatform/kubernetes"}

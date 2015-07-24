@@ -1,0 +1,1 @@
+{:bugs 7, :commits 199, :tests 0, :repoqry "+repo:plusjade/jekyll-bootstrap", :name "plusjade/jekyll-bootstrap"}

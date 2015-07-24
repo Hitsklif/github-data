@@ -1,0 +1,1 @@
+{:bugs 15, :commits 946, :tests 0, :repoqry "+repo:addyosmani/backbone-fundamentals", :name "addyosmani/backbone-fundamentals"}

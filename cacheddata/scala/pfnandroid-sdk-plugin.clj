@@ -1,0 +1,1 @@
+{:bugs 0, :commits 591, :tests 3, :repoqry "+repo:pfn/android-sdk-plugin", :name "pfn/android-sdk-plugin"}

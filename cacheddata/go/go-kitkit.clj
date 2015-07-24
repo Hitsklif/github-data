@@ -1,0 +1,1 @@
+{:bugs 0, :commits 272, :tests 33, :repoqry "+repo:go-kit/kit", :name "go-kit/kit"}

@@ -1,0 +1,1 @@
+{:bugs 28, :commits 608, :tests 6, :repoqry "+repo:gionkunz/chartist-js", :name "gionkunz/chartist-js"}

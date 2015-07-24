@@ -1,0 +1,1 @@
+{:bugs 27, :commits 318, :tests 1, :repoqry "+repo:n3-charts/line-chart", :name "n3-charts/line-chart"}

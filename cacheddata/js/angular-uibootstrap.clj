@@ -1,0 +1,1 @@
+{:bugs 0, :commits 725, :tests 29, :repoqry "+repo:angular-ui/bootstrap", :name "angular-ui/bootstrap"}

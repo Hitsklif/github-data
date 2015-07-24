@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1473, :tests 0, :repoqry "+repo:AccelerateHS/accelerate", :name "AccelerateHS/accelerate"}

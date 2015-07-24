@@ -1,0 +1,1 @@
+{:bugs 5, :commits 1043, :tests 43, :repoqry "+repo:hspec/hspec", :name "hspec/hspec"}

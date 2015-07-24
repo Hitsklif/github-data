@@ -1,0 +1,1 @@
+{:bugs 0, :commits 132, :tests 0, :repoqry "+repo:faif/python-patterns", :name "faif/python-patterns"}

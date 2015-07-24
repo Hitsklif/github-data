@@ -1,0 +1,1 @@
+{:bugs 2, :commits 4255, :tests 115, :repoqry "+repo:numenta/nupic", :name "numenta/nupic"}

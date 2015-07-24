@@ -1,0 +1,1 @@
+{:bugs 6, :commits 219, :tests 4, :repoqry "+repo:florent37/MaterialViewPager", :name "florent37/MaterialViewPager"}

@@ -1,0 +1,1 @@
+{:bugs 47, :commits 1867, :tests 60, :repoqry "+repo:NICTA/scoobi", :name "NICTA/scoobi"}

@@ -1,0 +1,1 @@
+{:bugs 28, :commits 862, :tests 9, :repoqry "+repo:twbs/bootstrap-sass", :name "twbs/bootstrap-sass"}

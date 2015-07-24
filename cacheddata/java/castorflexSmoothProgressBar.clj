@@ -1,0 +1,1 @@
+{:bugs 1, :commits 150, :tests 0, :repoqry "+repo:castorflex/SmoothProgressBar", :name "castorflex/SmoothProgressBar"}

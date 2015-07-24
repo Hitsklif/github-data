@@ -1,0 +1,1 @@
+{:bugs 4, :commits 170, :tests 0, :repoqry "+repo:fsprojects/FSharp.Configuration", :name "fsprojects/FSharp.Configuration"}

@@ -1,0 +1,1 @@
+{:bugs 4, :commits 205, :tests 6, :repoqry "+repo:AndroidBootstrap/android-bootstrap", :name "AndroidBootstrap/android-bootstrap"}

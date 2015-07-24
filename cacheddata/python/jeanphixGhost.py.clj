@@ -1,0 +1,1 @@
+{:bugs 0, :commits 490, :tests 2, :repoqry "+repo:jeanphix/Ghost.py", :name "jeanphix/Ghost.py"}

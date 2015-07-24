@@ -1,0 +1,1 @@
+{:bugs 242, :commits 4533, :tests 47, :repoqry "+repo:tomchristie/django-rest-framework", :name "tomchristie/django-rest-framework"}

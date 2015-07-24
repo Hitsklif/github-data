@@ -1,0 +1,1 @@
+{:bugs 8, :commits 649, :tests 14, :repoqry "+repo:mitsuhiko/click", :name "mitsuhiko/click"}

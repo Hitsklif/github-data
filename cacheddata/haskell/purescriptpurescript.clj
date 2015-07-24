@@ -1,0 +1,1 @@
+{:bugs 222, :commits 2183, :tests 1, :repoqry "+repo:purescript/purescript", :name "purescript/purescript"}

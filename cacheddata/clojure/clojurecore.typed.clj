@@ -1,0 +1,1 @@
+{:bugs 0, :commits 2142, :tests 17, :repoqry "+repo:clojure/core.typed", :name "clojure/core.typed"}

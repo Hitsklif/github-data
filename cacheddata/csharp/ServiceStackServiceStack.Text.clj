@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1381, :tests 8, :repoqry "+repo:ServiceStack/ServiceStack.Text", :name "ServiceStack/ServiceStack.Text"}

@@ -1,0 +1,1 @@
+{:bugs 112, :commits 5129, :tests 1, :repoqry "+repo:lodash/lodash", :name "lodash/lodash"}

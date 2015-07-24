@@ -1,0 +1,1 @@
+{:bugs 2, :commits 100, :tests 15, :repoqry "+repo:yahoo/kafka-manager", :name "yahoo/kafka-manager"}

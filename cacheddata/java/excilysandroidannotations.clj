@@ -1,0 +1,1 @@
+{:bugs 0, :commits 2040, :tests 102, :repoqry "+repo:excilys/androidannotations", :name "excilys/androidannotations"}

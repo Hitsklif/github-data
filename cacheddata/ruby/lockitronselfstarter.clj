@@ -1,0 +1,1 @@
+{:bugs 0, :commits 123, :tests 6, :repoqry "+repo:lockitron/selfstarter", :name "lockitron/selfstarter"}

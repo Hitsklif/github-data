@@ -1,0 +1,1 @@
+{:bugs 0, :commits 555, :tests 57, :repoqry "+repo:iluwatar/java-design-patterns", :name "iluwatar/java-design-patterns"}

@@ -1,0 +1,1 @@
+{:bugs 2, :commits 429, :tests 0, :repoqry "+repo:madskristensen/MiniBlog", :name "madskristensen/MiniBlog"}

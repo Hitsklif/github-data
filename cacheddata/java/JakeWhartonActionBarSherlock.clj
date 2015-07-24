@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1439, :tests 1, :repoqry "+repo:JakeWharton/ActionBarSherlock", :name "JakeWharton/ActionBarSherlock"}

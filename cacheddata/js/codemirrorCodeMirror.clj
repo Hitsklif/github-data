@@ -1,0 +1,1 @@
+{:bugs 0, :commits 3952, :tests 29, :repoqry "+repo:codemirror/CodeMirror", :name "codemirror/CodeMirror"}

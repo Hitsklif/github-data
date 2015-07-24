@@ -1,0 +1,1 @@
+{:bugs 4, :commits 242, :tests 27, :repoqry "+repo:greenrobot/EventBus", :name "greenrobot/EventBus"}

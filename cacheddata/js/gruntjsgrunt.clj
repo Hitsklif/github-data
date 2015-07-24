@@ -1,0 +1,1 @@
+{:bugs 22, :commits 1287, :tests 8, :repoqry "+repo:gruntjs/grunt", :name "gruntjs/grunt"}

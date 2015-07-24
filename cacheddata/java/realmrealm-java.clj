@@ -1,0 +1,1 @@
+{:bugs 75, :commits 3547, :tests 47, :repoqry "+repo:realm/realm-java", :name "realm/realm-java"}

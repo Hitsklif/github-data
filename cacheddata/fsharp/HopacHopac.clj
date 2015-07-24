@@ -1,0 +1,1 @@
+{:bugs 3, :commits 892, :tests 0, :repoqry "+repo:Hopac/Hopac", :name "Hopac/Hopac"}

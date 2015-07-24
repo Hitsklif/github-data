@@ -1,0 +1,1 @@
+{:bugs 13, :commits 248, :tests 9, :repoqry "+repo:dejan/rails_panel", :name "dejan/rails_panel"}

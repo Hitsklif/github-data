@@ -1,0 +1,1 @@
+{:bugs 5, :commits 555, :tests 10, :repoqry "+repo:ReactiveMongo/ReactiveMongo", :name "ReactiveMongo/ReactiveMongo"}

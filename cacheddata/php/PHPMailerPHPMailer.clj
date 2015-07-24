@@ -1,0 +1,1 @@
+{:bugs 8, :commits 556, :tests 3, :repoqry "+repo:PHPMailer/PHPMailer", :name "PHPMailer/PHPMailer"}

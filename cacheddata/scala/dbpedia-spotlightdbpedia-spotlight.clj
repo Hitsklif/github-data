@@ -1,0 +1,1 @@
+{:bugs 14, :commits 1011, :tests 11, :repoqry "+repo:dbpedia-spotlight/dbpedia-spotlight", :name "dbpedia-spotlight/dbpedia-spotlight"}

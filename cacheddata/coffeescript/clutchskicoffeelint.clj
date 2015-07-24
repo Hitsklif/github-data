@@ -1,0 +1,1 @@
+{:bugs 35, :commits 710, :tests 43, :repoqry "+repo:clutchski/coffeelint", :name "clutchski/coffeelint"}

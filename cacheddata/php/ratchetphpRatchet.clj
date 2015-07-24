@@ -1,0 +1,1 @@
+{:bugs 25, :commits 584, :tests 25, :repoqry "+repo:ratchetphp/Ratchet", :name "ratchetphp/Ratchet"}

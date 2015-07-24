@@ -1,0 +1,1 @@
+{:bugs 1, :commits 396, :tests 42, :repoqry "+repo:twitter/cassovary", :name "twitter/cassovary"}

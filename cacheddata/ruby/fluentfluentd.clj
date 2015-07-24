@@ -1,0 +1,1 @@
+{:bugs 36, :commits 1326, :tests 54, :repoqry "+repo:fluent/fluentd", :name "fluent/fluentd"}

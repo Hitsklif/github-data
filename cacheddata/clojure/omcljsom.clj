@@ -1,0 +1,1 @@
+{:bugs 11, :commits 831, :tests 0, :repoqry "+repo:omcljs/om", :name "omcljs/om"}

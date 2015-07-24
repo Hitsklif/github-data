@@ -1,0 +1,1 @@
+{:bugs 39, :commits 761, :tests 0, :repoqry "+repo:alvarotrigo/fullPage.js", :name "alvarotrigo/fullPage.js"}

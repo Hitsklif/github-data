@@ -1,0 +1,1 @@
+{:bugs 0, :commits 755, :tests 2, :repoqry "+repo:tpetricek/FSharp.Formatting", :name "tpetricek/FSharp.Formatting"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 218, :tests 4, :repoqry "+repo:thoughtbot/guides", :name "thoughtbot/guides"}

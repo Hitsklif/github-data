@@ -1,0 +1,1 @@
+{:bugs 0, :commits 816, :tests 0, :repoqry "+repo:dakrone/clj-http", :name "dakrone/clj-http"}

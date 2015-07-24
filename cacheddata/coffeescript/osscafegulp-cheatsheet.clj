@@ -1,0 +1,1 @@
+{:bugs 0, :commits 38, :tests 0, :repoqry "+repo:osscafe/gulp-cheatsheet", :name "osscafe/gulp-cheatsheet"}

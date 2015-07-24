@@ -1,0 +1,1 @@
+{:bugs 3, :commits 242, :tests 8, :repoqry "+repo:laserlemon/figaro", :name "laserlemon/figaro"}

@@ -1,0 +1,1 @@
+{:bugs 50, :commits 1314, :tests 0, :repoqry "+repo:sdelements/lets-chat", :name "sdelements/lets-chat"}

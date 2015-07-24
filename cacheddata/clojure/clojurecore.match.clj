@@ -1,0 +1,1 @@
+{:bugs 0, :commits 834, :tests 1, :repoqry "+repo:clojure/core.match", :name "clojure/core.match"}

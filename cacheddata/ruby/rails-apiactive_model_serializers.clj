@@ -1,0 +1,1 @@
+{:bugs 31, :commits 318, :tests 38, :repoqry "+repo:rails-api/active_model_serializers", :name "rails-api/active_model_serializers"}

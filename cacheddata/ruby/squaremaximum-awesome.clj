@@ -1,0 +1,1 @@
+{:bugs 10, :commits 177, :tests 0, :repoqry "+repo:square/maximum-awesome", :name "square/maximum-awesome"}

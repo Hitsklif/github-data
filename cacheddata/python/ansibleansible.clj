@@ -1,0 +1,1 @@
+{:bugs 0, :commits 11013, :tests 45, :repoqry "+repo:ansible/ansible", :name "ansible/ansible"}

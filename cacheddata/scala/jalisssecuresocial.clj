@@ -1,0 +1,1 @@
+{:bugs 1, :commits 403, :tests 6, :repoqry "+repo:jaliss/securesocial", :name "jaliss/securesocial"}

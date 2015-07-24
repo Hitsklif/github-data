@@ -1,0 +1,1 @@
+{:bugs 0, :commits 233, :tests 5, :repoqry "+repo:joyofclojure/book-source", :name "joyofclojure/book-source"}

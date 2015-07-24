@@ -1,0 +1,1 @@
+{:bugs 19, :commits 210, :tests 10, :repoqry "+repo:spray/spray-json", :name "spray/spray-json"}

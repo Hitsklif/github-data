@@ -1,0 +1,1 @@
+{:bugs 0, :commits 244, :tests 5, :repoqry "+repo:etsy/deployinator", :name "etsy/deployinator"}

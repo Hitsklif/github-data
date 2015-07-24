@@ -1,0 +1,1 @@
+{:bugs 0, :commits 931, :tests 78, :repoqry "+repo:kriswallsmith/assetic", :name "kriswallsmith/assetic"}

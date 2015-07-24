@@ -1,0 +1,1 @@
+{:bugs 124, :commits 1452, :tests 2, :repoqry "+repo:ShareX/ShareX", :name "ShareX/ShareX"}

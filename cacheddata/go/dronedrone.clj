@@ -1,0 +1,1 @@
+{:bugs 25, :commits 1108, :tests 40, :repoqry "+repo:drone/drone", :name "drone/drone"}

@@ -1,0 +1,1 @@
+{:bugs 9, :commits 153, :tests 0, :repoqry "+repo:daimajia/AndroidSwipeLayout", :name "daimajia/AndroidSwipeLayout"}

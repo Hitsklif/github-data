@@ -1,0 +1,1 @@
+{:bugs 43, :commits 810, :tests 1, :repoqry "+repo:play2war/play2-war-plugin", :name "play2war/play2-war-plugin"}

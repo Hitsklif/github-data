@@ -1,0 +1,1 @@
+{:bugs 26, :commits 42, :tests 0, :repoqry "+repo:jlmakes/scrollReveal.js", :name "jlmakes/scrollReveal.js"}

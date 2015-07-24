@@ -1,0 +1,1 @@
+{:bugs 2, :commits 787, :tests 58, :repoqry "+repo:hybridgroup/gobot", :name "hybridgroup/gobot"}

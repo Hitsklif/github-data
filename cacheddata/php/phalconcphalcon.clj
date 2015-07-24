@@ -1,0 +1,1 @@
+{:bugs 0, :commits 6823, :tests 193, :repoqry "+repo:phalcon/cphalcon", :name "phalcon/cphalcon"}

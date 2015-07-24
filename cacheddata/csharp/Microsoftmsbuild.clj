@@ -1,0 +1,1 @@
+{:bugs 0, :commits 50, :tests 17, :repoqry "+repo:Microsoft/msbuild", :name "Microsoft/msbuild"}

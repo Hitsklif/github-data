@@ -1,0 +1,1 @@
+{:bugs 5, :commits 104, :tests 0, :repoqry "+repo:47deg/android-swipelistview", :name "47deg/android-swipelistview"}

@@ -1,0 +1,1 @@
+{:bugs 204, :commits 4340, :tests 36, :repoqry "+repo:torchbox/wagtail", :name "torchbox/wagtail"}

@@ -1,0 +1,1 @@
+{:bugs 6, :commits 462, :tests 0, :repoqry "+repo:lihaoyi/Ammonite", :name "lihaoyi/Ammonite"}

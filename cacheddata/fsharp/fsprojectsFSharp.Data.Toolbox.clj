@@ -1,0 +1,1 @@
+{:bugs 0, :commits 69, :tests 0, :repoqry "+repo:fsprojects/FSharp.Data.Toolbox", :name "fsprojects/FSharp.Data.Toolbox"}

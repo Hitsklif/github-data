@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1128, :tests 0, :repoqry "+repo:clojure/core.logic", :name "clojure/core.logic"}

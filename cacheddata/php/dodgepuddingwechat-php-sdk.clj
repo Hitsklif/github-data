@@ -1,0 +1,1 @@
+{:bugs 0, :commits 309, :tests 0, :repoqry "+repo:dodgepudding/wechat-php-sdk", :name "dodgepudding/wechat-php-sdk"}

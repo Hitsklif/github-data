@@ -1,0 +1,1 @@
+{:bugs 0, :commits 53, :tests 0, :repoqry "+repo:wagerfield/parallax", :name "wagerfield/parallax"}

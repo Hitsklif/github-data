@@ -1,0 +1,1 @@
+{:bugs 87, :commits 892, :tests 10, :repoqry "+repo:sbt/sbt-native-packager", :name "sbt/sbt-native-packager"}

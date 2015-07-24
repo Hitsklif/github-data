@@ -1,0 +1,1 @@
+{:bugs 0, :commits 172, :tests 1, :repoqry "+repo:hipchat/hubot-hipchat", :name "hipchat/hubot-hipchat"}

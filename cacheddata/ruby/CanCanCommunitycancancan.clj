@@ -1,0 +1,1 @@
+{:bugs 18, :commits 598, :tests 14, :repoqry "+repo:CanCanCommunity/cancancan", :name "CanCanCommunity/cancancan"}

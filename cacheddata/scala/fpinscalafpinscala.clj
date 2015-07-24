@@ -1,0 +1,1 @@
+{:bugs 0, :commits 297, :tests 1, :repoqry "+repo:fpinscala/fpinscala", :name "fpinscala/fpinscala"}

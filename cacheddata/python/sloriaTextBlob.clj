@@ -1,0 +1,1 @@
+{:bugs 7, :commits 349, :tests 11, :repoqry "+repo:sloria/TextBlob", :name "sloria/TextBlob"}

@@ -1,0 +1,1 @@
+{:bugs 218, :commits 4699, :tests 540, :repoqry "+repo:Sylius/Sylius", :name "Sylius/Sylius"}

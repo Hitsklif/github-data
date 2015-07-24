@@ -1,0 +1,1 @@
+{:bugs 8, :commits 698, :tests 38, :repoqry "+repo:finagle/finch", :name "finagle/finch"}

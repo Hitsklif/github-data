@@ -1,0 +1,1 @@
+{:bugs 0, :commits 40, :tests 2, :repoqry "+repo:Flipboard/react-canvas", :name "Flipboard/react-canvas"}

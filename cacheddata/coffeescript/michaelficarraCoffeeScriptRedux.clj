@@ -1,0 +1,1 @@
+{:bugs 54, :commits 676, :tests 0, :repoqry "+repo:michaelficarra/CoffeeScriptRedux", :name "michaelficarra/CoffeeScriptRedux"}

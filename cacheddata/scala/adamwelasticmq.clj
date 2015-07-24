@@ -1,0 +1,1 @@
+{:bugs 0, :commits 749, :tests 10, :repoqry "+repo:adamw/elasticmq", :name "adamw/elasticmq"}

@@ -1,0 +1,1 @@
+{:bugs 10, :commits 254, :tests 2, :repoqry "+repo:Zizaco/entrust", :name "Zizaco/entrust"}

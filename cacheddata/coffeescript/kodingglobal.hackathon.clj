@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1877, :tests 0, :repoqry "+repo:koding/global.hackathon", :name "koding/global.hackathon"}

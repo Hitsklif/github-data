@@ -2,30 +2,34 @@
   (use [github-data.private]
        [github-data.cached])
   (require [clj-http.client :as client]
+           [clojure.edn :as edn]
+           [clojure.java.io :as io]
            [clojure.data.json :as json]))
 
-(def repo_count  "https://api.github.com/search/repositories?q=language:")
+(def repo_count  "hrepocounts ttps://api.github.com/search/repositories?q=language:")
 (def bug_count "https://api.github.com/search/issues?q=label:bug+language:")
 (def comitcounts "https://api.github.com/repos/")
-(def bugs "https://api.github.com/search/issues?q=label:bug+created:\"2013-01-01..2015-05-30\"")
-
-;;(client/post "https://api.github.com/search/issues" (merge token {:label "bug"}))
+(def date-range "+created:\"2011-01-01..2015-05-30\"")
+(def bugs (str "https://api.github.com/search/issues?q=label:bug" date-range))
 
 (def langs ["csharp" "fsharp" "clojure" "js" "coffeescript"
             "scala" "php" "go" "java" "haskell" "ruby" "python"])
 
-(defn get-count [q lang]
-  (-> (str q lang)
-      (client/get token)
-      :body
-      json/read-str
-      (get "total_count")))
+;; (json/write-str langs)
 
-(def all_bug_counts (map #(get-count bug_count %) langs))
-(def all_repo_counts (map #(get-count repo_count %) langs))
-(def bugs-per-repo (map #(float (/ %1 %2)) all_bug_counts all_repo_counts))
+;; (defn get-count [q lang]
+;;   (-> (str q lang)
+;;       (client/get token)
+;;       :body
+;;       json/read-str
+;;       (get "total_count")))
+
+;; (def all_bug_counts (map #(get-count bug_count %) langs))
+;; (def all_repo_counts (map #(get-count repo_count %) langs))
+;; (def bugs-per-repo (map #(float (/ %1 %2)) all_bug_counts all_repo_counts))
 
 (defn get-json [q]
+  (println "GET:" q)
   (-> q
       (client/get token)
       :body
@@ -40,7 +44,7 @@
   ([lang] (get-names lang 1))
   ([lang num]
    (map #(get % "full_name")
-        (-> (get-json (str repo_count lang "+created:\"2012-01-01..2014-01-01\"+forks:\">15\"&per_page=150&page=" num))
+        (-> (get-json (str repo_count lang date-range "+forks:\">15\"&per_page=200&page=" num))
             (get "items")))))
 
 (defn get-count-q [q]
@@ -68,24 +72,72 @@
           0
           repos))
 
+(defn get-test-data [repo lang file-search]
+  (try
+    (if (or (.contains repo "Test") (.contains repo "test")) 0
+        (get (get-json
+              (str "https://api.github.com/search/code?q="
+                   (reduce #(str %1 "+filename:" %2) "" file-search)
+                   "+language:" lang repo "&per_page=1"))
+             "total_count"))
+    (catch Exception e 0)
+    ))
+
 (def bugs-many-paged [])
 (defn get-many-paged-commits []
   (map get-repos-commit-counts bugs-many-paged))
 
 ;; (def commits-time (get-many-paged-commits))
 
-(defn get-many-paged-bugs []
-  (for [lang langs]
-    (let [names (get-names lang)
-          t (swap! repo-names #(assoc % (keyword lang) names))
-          counts (count names)
-          namesstrs (map (fn [x] (str "+repo:" x)) names)
-          bugcounts (map (fn [namestr]
-                           (Thread/sleep 4000)
-                           (let [bug-count (if (= counts 0) counts
-                                               (get-count-q (str bugs namestr)))]
-                             [bug-count namestr])) namesstrs)]
-      bugcounts)))
+(defn lang-dir-name [lang]
+  (str "cacheddata/" lang))
+
+(defn write-to-file [lang name data]
+  (with-open [w (clojure.java.io/writer
+                 (str (lang-dir-name lang) "/"
+                      (.replace name "/" "") ".clj"))]
+    (binding [*print-length* false
+              *out* w]
+      (pr data))))
+
+(defn get-data-for-repo [name lang]
+  (Thread/sleep 4000)
+  (let [namestr (str "+repo:" name)
+        bug-count (get-count-q (str bugs namestr))
+        x (Thread/sleep 4000)
+        url (str comitcounts name "/contributors")
+        json (get-json url)
+        contribs (map #(get % "contributions") json)
+        commits (reduce + contribs)
+        x (Thread/sleep 4000)
+        tests (get-test-data namestr lang ["spec" "test"])
+        data {:bugs bug-count :commits commits :tests tests :repoqry namestr :name name}]
+    (write-to-file lang name data)))
+
+(defn get-all-repo-data []
+  (.mkdir (java.io.File. "cacheddata"))
+  (doseq [lang langs]
+    (println "Lang:" lang)
+    (do (.mkdir (java.io.File. (lang-dir-name lang)))
+        (let [names (get-names lang)
+              counts (count names)
+              bugcounts (doall (map (fn [name x]
+                                      (get-data-for-repo name lang)
+                                      (println "Repo:" name " " (inc x) "/" counts))
+                                    names (range counts)))]
+          bugcounts))))
+;; (get-all-repo-data)
+
+(defn get-cached-lang-data [lang]
+  (->> (str  "cacheddata/" lang)
+       io/file
+       file-seq
+       (filter #(.endsWith (.getName %) ".clj") )
+       (map (comp edn/read-string
+                  slurp
+                  str))))
+
+(def clean-data (map get-cached-lang-data langs))
 
 ;; dont reeval!
 ;; (def bugs-many-paged (get-many-paged-bugs))
@@ -101,60 +153,73 @@
         coll (take (int (/ item-count 2)) coll)]
     coll))
 
-(defn get-test-data [repo lang file-search]
-  (try
-    (if (or (.contains repo "Test") (.contains repo "test")) 0
-        (get (get-json
-              (str "https://api.github.com/search/code?q="
-                   (reduce #(str %1 "+filename:" %2) "" file-search)
-                   "+language:" lang repo "&per_page=1"))
-             "total_count"))
-    (catch Exception e 0)
-    ))
-
-;; (get-json "https://api.github.com/search/code?q=+filename:spec+filename:test+language:clojure+repo:james-henderson/chord&per_page=1")
-
-(def just-bugs
-  (map
-   (fn [lang-data lang]
-     (let [value-fn first
-           ;; remove records without data (not using bug tracker)
-           not-zero (filter #(not= 0 (value-fn %)) lang-data)
-           not-zero (take-interquartile value-fn not-zero)
-           ;; repo-names (map second not-zero)
-           test-counts (map (fn [[bug-count repo]]
-                              (Thread/sleep 4000)
-                              {:tests (get-test-data repo lang ["spec" "test"])
-                               :bugs bug-count
-                               :repo repo}) not-zero)]
-       test-counts))
-   over-fifteen-forks
-   langs
-   ))
-;;just-bugs
-
 (def data-cleaned
-  #_(sort-by :testavg)
   (map
-   (fn [lang-data name tests commitcounts]
-     (let [value-fn first
+   (fn [lang-data name score total-repos]
+     (let [
            ;; remove records without data (not using bug tracker)
-           not-zero (filter #(not= 0 (value-fn %)) lang-data)
-           not-zero (take-interquartile value-fn not-zero)
+           not-zero (filter #(not= 0 (:bugs %)) lang-data)
+           ;; not-zero (take-interquartile :bugs not-zero)
            repo-count (count not-zero)
-           bug-count (reduce + (map value-fn not-zero))
-           ratio (float (/ bug-count repo-count))
-           ratiocommits (int (* 10000 (/ bug-count commitcounts)))
-           testspercommit (int (* 10000 (/ tests commitcounts)))
-           ]
-       {:name name :tests tests :bugs bug-count :repos repo-count :ratio ratio :testcommits testspercommit :bugcommits ratiocommits :commits commitcounts}))
-   ;;bugs-many-paged
-   over-fifteen-forks
-   langs
-   [169 7 45 206 46 730 414 811 1707 69 569 801]
-   [76405 5901 22798 83930 57124 74539 87741 93680 112441 48726 101431 81765]))
+           repo-data (map
+                      (fn [repo]
+                        (let [bug-count (:bugs repo)
+                              test-count (:tests repo)
+                              commit-count (:commits repo)
+                              bug-and-test-commit-ratio (float (/ (+ bug-count test-count)))
+                              ratiocommits (int (* 10000 (/ bug-count commit-count)))
+                              testspercommit (int (* 10000 (/ test-count commit-count)))]
+                          (merge repo {:bug-and-test-commit-ratio bug-and-test-commit-ratio :tests-commits-ratio testspercommit :bug-commit-ratio ratiocommits})))
+                      not-zero)
 
-;; (map :testavg data-cleaned)
+           not-zero (take-interquartile :bug-commit-ratio repo-data)
+
+           bug-count (reduce + (map :bugs not-zero))
+           test-count (reduce + (map :tests not-zero))
+           commit-count (reduce + (map :commits not-zero))
+           bug-repo-ratio (float (/ bug-count repo-count))
+           bug-and-test-commit-ratio (float (/ (+ bug-count test-count)
+                                               repo-count))
+           ratiocommits  (float (/ bug-count commit-count))
+           testspercommit (float (/ test-count commit-count))
+           ]
+       {:name name :bugs bug-count :test test-count :commits commit-count :total-repos total-repos :score score :repos repo-count :bug-and-test-commit-ratio bug-and-test-commit-ratio :tests-commits-ratio testspercommit :bug-commit-ratio ratiocommits}))
+   ;;bugs-many-paged
+   clean-data
+   langs
+   (list 3, 9,  3,  -3, -2,  6,  -1,  3,  3,  10,  -2,  -2,)
+   (list 307572,4180,30257,1475201,49716,49937,630816,75802,1224939,37328,826600,721979)
+   ))
+(json/write-str data-cleaned)
+
+
+(defn output-R []
+  (let [sorted (sort-by :score data-cleaned)
+        ratios (str "bugratios <- rescale(c" (toR (map :bug-commit-ratio sorted)) ")")
+        names  (str "names <- c" (toR (map #(str "'" (:name %) "'") sorted)))
+        scores (str "newscores <- rescale(c" (toR (map :score sorted)) ")")
+        total-repos (str "repos <- rescale(c" (toR (map :total-repos sorted)) ")")
+        output (str ratios "\n" names "\n" scores "\n" total-repos)]
+    (spit "/home/jack/programming/datasciencecoursera/langugagedata.R" output)
+    names))
+
+(output-R)
+
+
+(def all_repo_counts (map #(get-count-q (str repo_count %)) langs))
+
+(["clojure" 115]
+ ["haskell" 155]
+ ["scala" 190]
+ ["ruby" 203]
+ ["fsharp" 234]
+ ["go" 246]
+ ["python" 253]
+ ["php" 316]
+ ["java" 325]
+ ["csharp" 326]
+ ["js" 394]
+ ["coffeescript" 472])
 
 (defn toR [col]
   (str "(" (clojure.string/join "," col) ")"))

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 279, :tests 0, :repoqry "+repo:fgnass/spin.js", :name "fgnass/spin.js"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 446, :tests 10, :repoqry "+repo:begriffs/postgrest", :name "begriffs/postgrest"}

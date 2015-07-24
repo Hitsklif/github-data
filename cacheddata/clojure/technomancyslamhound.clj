@@ -1,0 +1,1 @@
+{:bugs 0, :commits 324, :tests 6, :repoqry "+repo:technomancy/slamhound", :name "technomancy/slamhound"}

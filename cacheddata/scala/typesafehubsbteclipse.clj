@@ -1,0 +1,1 @@
+{:bugs 15, :commits 118, :tests 2, :repoqry "+repo:typesafehub/sbteclipse", :name "typesafehub/sbteclipse"}

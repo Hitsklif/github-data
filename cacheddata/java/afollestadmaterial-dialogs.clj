@@ -1,0 +1,1 @@
+{:bugs 58, :commits 976, :tests 0, :repoqry "+repo:afollestad/material-dialogs", :name "afollestad/material-dialogs"}

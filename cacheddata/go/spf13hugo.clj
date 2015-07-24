@@ -1,0 +1,1 @@
+{:bugs 168, :commits 1206, :tests 49, :repoqry "+repo:spf13/hugo", :name "spf13/hugo"}

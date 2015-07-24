@@ -1,0 +1,1 @@
+{:bugs 214, :commits 5215, :tests 233, :repoqry "+repo:coreos/etcd", :name "coreos/etcd"}

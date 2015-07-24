@@ -1,0 +1,1 @@
+{:bugs 0, :commits 187, :tests 0, :repoqry "+repo:shichuan/javascript-patterns", :name "shichuan/javascript-patterns"}

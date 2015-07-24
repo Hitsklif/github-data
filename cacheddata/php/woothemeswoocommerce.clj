@@ -1,0 +1,1 @@
+{:bugs 260, :commits 11293, :tests 5, :repoqry "+repo:woothemes/woocommerce", :name "woothemes/woocommerce"}

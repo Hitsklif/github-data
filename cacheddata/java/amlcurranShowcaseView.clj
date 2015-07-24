@@ -1,0 +1,1 @@
+{:bugs 0, :commits 278, :tests 0, :repoqry "+repo:amlcurran/ShowcaseView", :name "amlcurran/ShowcaseView"}

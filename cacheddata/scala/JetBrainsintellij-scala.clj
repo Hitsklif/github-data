@@ -1,0 +1,1 @@
+{:bugs 0, :commits 10853, :tests 659, :repoqry "+repo:JetBrains/intellij-scala", :name "JetBrains/intellij-scala"}

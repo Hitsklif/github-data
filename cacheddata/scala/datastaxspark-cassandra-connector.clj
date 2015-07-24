@@ -1,0 +1,1 @@
+{:bugs 1, :commits 1241, :tests 58, :repoqry "+repo:datastax/spark-cassandra-connector", :name "datastax/spark-cassandra-connector"}

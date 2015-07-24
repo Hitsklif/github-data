@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1730, :tests 0, :repoqry "+repo:astaxie/build-web-application-with-golang", :name "astaxie/build-web-application-with-golang"}

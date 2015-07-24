@@ -1,0 +1,1 @@
+{:bugs 51, :commits 1051, :tests 16, :repoqry "+repo:docker/docker-registry", :name "docker/docker-registry"}

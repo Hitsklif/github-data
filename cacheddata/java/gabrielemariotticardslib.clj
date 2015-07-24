@@ -1,0 +1,1 @@
+{:bugs 28, :commits 593, :tests 0, :repoqry "+repo:gabrielemariotti/cardslib", :name "gabrielemariotti/cardslib"}

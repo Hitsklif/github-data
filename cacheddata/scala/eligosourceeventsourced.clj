@@ -1,0 +1,1 @@
+{:bugs 0, :commits 322, :tests 27, :repoqry "+repo:eligosource/eventsourced", :name "eligosource/eventsourced"}

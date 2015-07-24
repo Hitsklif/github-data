@@ -1,0 +1,1 @@
+{:bugs 50, :commits 374, :tests 51, :repoqry "+repo:tumblr/colossus", :name "tumblr/colossus"}

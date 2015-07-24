@@ -1,0 +1,1 @@
+{:bugs 0, :commits 136, :tests 0, :repoqry "+repo:swannodette/lt-cljs-tutorial", :name "swannodette/lt-cljs-tutorial"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 563, :tests 0, :repoqry "+repo:haskell/haskell-platform", :name "haskell/haskell-platform"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1712, :tests 35, :repoqry "+repo:facebook/react-native", :name "facebook/react-native"}

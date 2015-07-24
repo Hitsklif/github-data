@@ -1,0 +1,1 @@
+{:bugs 69, :commits 673, :tests 0, :repoqry "+repo:GaloisInc/cryptol", :name "GaloisInc/cryptol"}

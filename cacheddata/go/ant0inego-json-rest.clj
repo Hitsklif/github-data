@@ -1,0 +1,1 @@
+{:bugs 0, :commits 500, :tests 22, :repoqry "+repo:ant0ine/go-json-rest", :name "ant0ine/go-json-rest"}

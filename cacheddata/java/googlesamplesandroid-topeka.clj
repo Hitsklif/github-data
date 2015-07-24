@@ -1,0 +1,1 @@
+{:bugs 0, :commits 21, :tests 26, :repoqry "+repo:googlesamples/android-topeka", :name "googlesamples/android-topeka"}

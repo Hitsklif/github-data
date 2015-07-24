@@ -1,0 +1,1 @@
+{:bugs 124, :commits 1708, :tests 36, :repoqry "+repo:angular-ui/angular-google-maps", :name "angular-ui/angular-google-maps"}

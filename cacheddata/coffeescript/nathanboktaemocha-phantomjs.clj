@@ -1,0 +1,1 @@
+{:bugs 0, :commits 288, :tests 0, :repoqry "+repo:nathanboktae/mocha-phantomjs", :name "nathanboktae/mocha-phantomjs"}

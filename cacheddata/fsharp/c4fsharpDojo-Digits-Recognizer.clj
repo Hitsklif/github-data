@@ -1,0 +1,1 @@
+{:bugs 0, :commits 12, :tests 0, :repoqry "+repo:c4fsharp/Dojo-Digits-Recognizer", :name "c4fsharp/Dojo-Digits-Recognizer"}

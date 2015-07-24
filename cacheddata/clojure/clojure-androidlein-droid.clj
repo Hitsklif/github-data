@@ -1,0 +1,1 @@
+{:bugs 35, :commits 338, :tests 1, :repoqry "+repo:clojure-android/lein-droid", :name "clojure-android/lein-droid"}

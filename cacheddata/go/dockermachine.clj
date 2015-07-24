@@ -1,0 +1,1 @@
+{:bugs 47, :commits 1257, :tests 496, :repoqry "+repo:docker/machine", :name "docker/machine"}

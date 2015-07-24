@@ -1,0 +1,1 @@
+{:bugs 113, :commits 3361, :tests 276, :repoqry "+repo:bbatsov/rubocop", :name "bbatsov/rubocop"}

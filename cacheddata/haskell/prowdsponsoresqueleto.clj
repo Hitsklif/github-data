@@ -1,0 +1,1 @@
+{:bugs 5, :commits 362, :tests 1, :repoqry "+repo:prowdsponsor/esqueleto", :name "prowdsponsor/esqueleto"}

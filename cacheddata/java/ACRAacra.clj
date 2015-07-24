@@ -1,0 +1,1 @@
+{:bugs 12, :commits 570, :tests 1, :repoqry "+repo:ACRA/acra", :name "ACRA/acra"}

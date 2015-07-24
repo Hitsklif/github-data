@@ -1,0 +1,1 @@
+{:bugs 47, :commits 877, :tests 0, :repoqry "+repo:Squirrel/OldSquirrelForWindows", :name "Squirrel/OldSquirrelForWindows"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 238, :tests 0, :repoqry "+repo:huangz1990/real-world-haskell-cn", :name "huangz1990/real-world-haskell-cn"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 119, :tests 1, :repoqry "+repo:googlesamples/android-UniversalMusicPlayer", :name "googlesamples/android-UniversalMusicPlayer"}

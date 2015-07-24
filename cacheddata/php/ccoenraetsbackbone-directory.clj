@@ -1,0 +1,1 @@
+{:bugs 0, :commits 13, :tests 0, :repoqry "+repo:ccoenraets/backbone-directory", :name "ccoenraets/backbone-directory"}

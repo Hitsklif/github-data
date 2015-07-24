@@ -1,0 +1,1 @@
+{:bugs 0, :commits 2323, :tests 183, :repoqry "+repo:AsyncHttpClient/async-http-client", :name "AsyncHttpClient/async-http-client"}

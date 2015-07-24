@@ -1,0 +1,1 @@
+{:bugs 0, :commits 789, :tests 4, :repoqry "+repo:nessos/FsPickler", :name "nessos/FsPickler"}

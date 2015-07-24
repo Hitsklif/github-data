@@ -1,0 +1,1 @@
+{:bugs 120, :commits 1470, :tests 0, :repoqry "+repo:select2/select2", :name "select2/select2"}

@@ -1,0 +1,1 @@
+{:bugs 21, :commits 349, :tests 10, :repoqry "+repo:thoughtbot/carnival", :name "thoughtbot/carnival"}

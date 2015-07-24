@@ -1,0 +1,1 @@
+{:bugs 0, :commits 6850, :tests 5, :repoqry "+repo:mozilla/pdf.js", :name "mozilla/pdf.js"}

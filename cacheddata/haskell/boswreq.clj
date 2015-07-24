@@ -1,0 +1,1 @@
+{:bugs 1, :commits 327, :tests 0, :repoqry "+repo:bos/wreq", :name "bos/wreq"}

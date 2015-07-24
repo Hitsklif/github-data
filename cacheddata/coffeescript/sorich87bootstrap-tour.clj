@@ -1,0 +1,1 @@
+{:bugs 115, :commits 547, :tests 1, :repoqry "+repo:sorich87/bootstrap-tour", :name "sorich87/bootstrap-tour"}

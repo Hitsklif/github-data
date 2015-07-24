@@ -1,0 +1,1 @@
+{:bugs 0, :commits 81, :tests 2, :repoqry "+repo:traex/RippleEffect", :name "traex/RippleEffect"}

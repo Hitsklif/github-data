@@ -1,0 +1,1 @@
+{:bugs 0, :commits 694, :tests 58, :repoqry "+repo:salat/salat", :name "salat/salat"}

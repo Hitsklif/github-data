@@ -1,0 +1,1 @@
+{:bugs 0, :commits 308, :tests 0, :repoqry "+repo:chris-taylor/aima-haskell", :name "chris-taylor/aima-haskell"}

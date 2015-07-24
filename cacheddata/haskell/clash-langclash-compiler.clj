@@ -1,0 +1,1 @@
+{:bugs 21, :commits 1067, :tests 4, :repoqry "+repo:clash-lang/clash-compiler", :name "clash-lang/clash-compiler"}

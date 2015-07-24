@@ -1,0 +1,1 @@
+{:bugs 3, :commits 1265, :tests 6, :repoqry "+repo:linnovate/mean", :name "linnovate/mean"}

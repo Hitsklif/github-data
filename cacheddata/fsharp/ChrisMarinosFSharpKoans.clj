@@ -1,0 +1,1 @@
+{:bugs 0, :commits 120, :tests 0, :repoqry "+repo:ChrisMarinos/FSharpKoans", :name "ChrisMarinos/FSharpKoans"}

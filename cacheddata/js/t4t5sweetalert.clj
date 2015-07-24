@@ -1,0 +1,1 @@
+{:bugs 22, :commits 170, :tests 0, :repoqry "+repo:t4t5/sweetalert", :name "t4t5/sweetalert"}

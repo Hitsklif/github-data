@@ -1,0 +1,1 @@
+{:bugs 0, :commits 109, :tests 633, :repoqry "+repo:alibaba/fastjson", :name "alibaba/fastjson"}

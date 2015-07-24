@@ -1,0 +1,1 @@
+{:bugs 30, :commits 5858, :tests 67, :repoqry "+repo:bcit-ci/CodeIgniter", :name "bcit-ci/CodeIgniter"}

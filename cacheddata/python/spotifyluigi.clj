@@ -1,0 +1,1 @@
+{:bugs 4, :commits 1884, :tests 72, :repoqry "+repo:spotify/luigi", :name "spotify/luigi"}

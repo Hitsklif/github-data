@@ -1,0 +1,1 @@
+{:bugs 152, :commits 2129, :tests 51, :repoqry "+repo:marionettejs/backbone.marionette", :name "marionettejs/backbone.marionette"}

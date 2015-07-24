@@ -1,0 +1,1 @@
+{:bugs 8, :commits 151, :tests 0, :repoqry "+repo:futuresimple/android-floating-action-button", :name "futuresimple/android-floating-action-button"}

@@ -1,0 +1,1 @@
+{:bugs 24, :commits 647, :tests 0, :repoqry "+repo:Caliburn-Micro/Caliburn.Micro", :name "Caliburn-Micro/Caliburn.Micro"}

@@ -1,0 +1,1 @@
+{:bugs 29, :commits 864, :tests 152, :repoqry "+repo:aws/aws-sdk-go", :name "aws/aws-sdk-go"}

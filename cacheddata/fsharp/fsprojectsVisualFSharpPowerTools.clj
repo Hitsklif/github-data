@@ -1,0 +1,1 @@
+{:bugs 225, :commits 2153, :tests 4, :repoqry "+repo:fsprojects/VisualFSharpPowerTools", :name "fsprojects/VisualFSharpPowerTools"}

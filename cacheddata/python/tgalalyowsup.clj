@@ -1,0 +1,1 @@
+{:bugs 47, :commits 763, :tests 69, :repoqry "+repo:tgalal/yowsup", :name "tgalal/yowsup"}

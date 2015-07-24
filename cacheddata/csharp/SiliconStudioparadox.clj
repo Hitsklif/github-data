@@ -1,0 +1,1 @@
+{:bugs 81, :commits 24, :tests 276, :repoqry "+repo:SiliconStudio/paradox", :name "SiliconStudio/paradox"}

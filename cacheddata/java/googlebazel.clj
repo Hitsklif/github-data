@@ -1,0 +1,1 @@
+{:bugs 14, :commits 1379, :tests 295, :repoqry "+repo:google/bazel", :name "google/bazel"}

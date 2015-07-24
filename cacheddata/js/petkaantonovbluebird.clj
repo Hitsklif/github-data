@@ -1,0 +1,1 @@
+{:bugs 5, :commits 1459, :tests 4, :repoqry "+repo:petkaantonov/bluebird", :name "petkaantonov/bluebird"}

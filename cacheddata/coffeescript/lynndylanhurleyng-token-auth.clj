@@ -1,0 +1,1 @@
+{:bugs 0, :commits 394, :tests 1, :repoqry "+repo:lynndylanhurley/ng-token-auth", :name "lynndylanhurley/ng-token-auth"}

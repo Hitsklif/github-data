@@ -1,0 +1,1 @@
+{:bugs 0, :commits 394, :tests 0, :repoqry "+repo:McPants/jquery.shapeshift", :name "McPants/jquery.shapeshift"}

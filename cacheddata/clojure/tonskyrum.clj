@@ -1,0 +1,1 @@
+{:bugs 0, :commits 66, :tests 0, :repoqry "+repo:tonsky/rum", :name "tonsky/rum"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 81, :tests 0, :repoqry "+repo:fsprojects/FsXaml", :name "fsprojects/FsXaml"}

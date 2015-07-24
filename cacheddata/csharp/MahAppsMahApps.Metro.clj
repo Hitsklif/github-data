@@ -1,0 +1,1 @@
+{:bugs 276, :commits 2666, :tests 10, :repoqry "+repo:MahApps/MahApps.Metro", :name "MahApps/MahApps.Metro"}

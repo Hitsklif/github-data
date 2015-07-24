@@ -1,0 +1,1 @@
+{:bugs 124, :commits 1324, :tests 2, :repoqry "+repo:Epix37/Hearthstone-Deck-Tracker", :name "Epix37/Hearthstone-Deck-Tracker"}

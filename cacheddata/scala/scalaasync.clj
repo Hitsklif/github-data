@@ -1,0 +1,1 @@
+{:bugs 13, :commits 441, :tests 14, :repoqry "+repo:scala/async", :name "scala/async"}

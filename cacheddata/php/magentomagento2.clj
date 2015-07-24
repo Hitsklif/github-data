@@ -1,0 +1,1 @@
+{:bugs 257, :commits 6899, :tests 4280, :repoqry "+repo:magento/magento2", :name "magento/magento2"}

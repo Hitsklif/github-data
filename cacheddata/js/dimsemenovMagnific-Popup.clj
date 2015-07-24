@@ -1,0 +1,1 @@
+{:bugs 9, :commits 257, :tests 0, :repoqry "+repo:dimsemenov/Magnific-Popup", :name "dimsemenov/Magnific-Popup"}

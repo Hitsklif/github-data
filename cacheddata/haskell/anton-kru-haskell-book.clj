@@ -1,0 +1,1 @@
+{:bugs 0, :commits 156, :tests 3, :repoqry "+repo:anton-k/ru-haskell-book", :name "anton-k/ru-haskell-book"}

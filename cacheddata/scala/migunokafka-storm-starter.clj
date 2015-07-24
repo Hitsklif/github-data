@@ -1,0 +1,1 @@
+{:bugs 0, :commits 157, :tests 9, :repoqry "+repo:miguno/kafka-storm-starter", :name "miguno/kafka-storm-starter"}

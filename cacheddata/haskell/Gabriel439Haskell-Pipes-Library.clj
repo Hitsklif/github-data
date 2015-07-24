@@ -1,0 +1,1 @@
+{:bugs 0, :commits 987, :tests 0, :repoqry "+repo:Gabriel439/Haskell-Pipes-Library", :name "Gabriel439/Haskell-Pipes-Library"}

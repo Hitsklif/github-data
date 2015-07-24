@@ -1,0 +1,1 @@
+{:bugs 4, :commits 48, :tests 0, :repoqry "+repo:serkanyersen/ifvisible.js", :name "serkanyersen/ifvisible.js"}

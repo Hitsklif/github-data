@@ -1,0 +1,1 @@
+{:bugs 0, :commits 491, :tests 0, :repoqry "+repo:js2coffee/js2coffee", :name "js2coffee/js2coffee"}

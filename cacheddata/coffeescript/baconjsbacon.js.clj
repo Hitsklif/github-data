@@ -1,0 +1,1 @@
+{:bugs 6, :commits 1701, :tests 7, :repoqry "+repo:baconjs/bacon.js", :name "baconjs/bacon.js"}

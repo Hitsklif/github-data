@@ -1,0 +1,1 @@
+{:bugs 27, :commits 858, :tests 3, :repoqry "+repo:scala/pickling", :name "scala/pickling"}

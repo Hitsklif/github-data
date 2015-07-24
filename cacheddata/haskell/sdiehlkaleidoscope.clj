@@ -1,0 +1,1 @@
+{:bugs 0, :commits 96, :tests 0, :repoqry "+repo:sdiehl/kaleidoscope", :name "sdiehl/kaleidoscope"}

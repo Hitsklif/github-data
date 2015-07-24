@@ -1,0 +1,1 @@
+{:bugs 1, :commits 245, :tests 0, :repoqry "+repo:jisaacks/GitGutter", :name "jisaacks/GitGutter"}

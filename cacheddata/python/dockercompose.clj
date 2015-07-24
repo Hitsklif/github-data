@@ -1,0 +1,1 @@
+{:bugs 4, :commits 1332, :tests 17, :repoqry "+repo:docker/compose", :name "docker/compose"}

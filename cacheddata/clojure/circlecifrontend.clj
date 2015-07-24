@@ -1,0 +1,1 @@
+{:bugs 0, :commits 12149, :tests 17, :repoqry "+repo:circleci/frontend", :name "circleci/frontend"}

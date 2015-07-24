@@ -1,0 +1,1 @@
+{:bugs 15, :commits 593, :tests 0, :repoqry "+repo:openzipkin/zipkin", :name "openzipkin/zipkin"}

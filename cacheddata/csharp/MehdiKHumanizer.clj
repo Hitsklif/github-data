@@ -1,0 +1,1 @@
+{:bugs 11, :commits 966, :tests 4, :repoqry "+repo:MehdiK/Humanizer", :name "MehdiK/Humanizer"}

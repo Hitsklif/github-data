@@ -1,0 +1,1 @@
+{:bugs 0, :commits 68409, :tests 4622, :repoqry "+repo:JetBrains/intellij-community", :name "JetBrains/intellij-community"}

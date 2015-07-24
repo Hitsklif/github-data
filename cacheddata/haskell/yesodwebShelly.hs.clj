@@ -1,0 +1,1 @@
+{:bugs 1, :commits 391, :tests 15, :repoqry "+repo:yesodweb/Shelly.hs", :name "yesodweb/Shelly.hs"}

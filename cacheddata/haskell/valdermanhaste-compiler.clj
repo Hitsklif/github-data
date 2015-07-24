@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1317, :tests 1, :repoqry "+repo:valderman/haste-compiler", :name "valderman/haste-compiler"}

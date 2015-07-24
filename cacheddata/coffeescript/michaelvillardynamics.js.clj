@@ -1,0 +1,1 @@
+{:bugs 0, :commits 51, :tests 0, :repoqry "+repo:michaelvillar/dynamics.js", :name "michaelvillar/dynamics.js"}

@@ -1,0 +1,1 @@
+{:bugs 79, :commits 1097, :tests 2, :repoqry "+repo:chocolatey/choco", :name "chocolatey/choco"}

@@ -1,0 +1,1 @@
+{:bugs 36, :commits 1105, :tests 0, :repoqry "+repo:voat/voat", :name "voat/voat"}

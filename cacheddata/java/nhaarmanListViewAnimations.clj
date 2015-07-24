@@ -1,0 +1,1 @@
+{:bugs 0, :commits 583, :tests 14, :repoqry "+repo:nhaarman/ListViewAnimations", :name "nhaarman/ListViewAnimations"}

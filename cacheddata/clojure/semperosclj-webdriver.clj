@@ -1,0 +1,1 @@
+{:bugs 5, :commits 876, :tests 1, :repoqry "+repo:semperos/clj-webdriver", :name "semperos/clj-webdriver"}

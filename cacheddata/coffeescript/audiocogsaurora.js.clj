@@ -1,0 +1,1 @@
+{:bugs 0, :commits 213, :tests 1, :repoqry "+repo:audiocogs/aurora.js", :name "audiocogs/aurora.js"}

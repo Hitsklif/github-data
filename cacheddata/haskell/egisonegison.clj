@@ -1,0 +1,1 @@
+{:bugs 8, :commits 918, :tests 1, :repoqry "+repo:egison/egison", :name "egison/egison"}

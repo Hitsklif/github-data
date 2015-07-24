@@ -1,0 +1,1 @@
+{:bugs 33, :commits 1661, :tests 210, :repoqry "+repo:coreos/rkt", :name "coreos/rkt"}

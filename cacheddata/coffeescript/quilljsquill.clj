@@ -1,0 +1,1 @@
+{:bugs 95, :commits 2625, :tests 0, :repoqry "+repo:quilljs/quill", :name "quilljs/quill"}

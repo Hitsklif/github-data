@@ -1,0 +1,1 @@
+{:bugs 0, :commits 295, :tests 0, :repoqry "+repo:kemayo/sublime-text-git", :name "kemayo/sublime-text-git"}

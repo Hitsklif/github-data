@@ -1,0 +1,1 @@
+{:bugs 0, :commits 679, :tests 10, :repoqry "+repo:fchollet/keras", :name "fchollet/keras"}

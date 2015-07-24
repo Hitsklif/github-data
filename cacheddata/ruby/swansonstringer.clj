@@ -1,0 +1,1 @@
+{:bugs 38, :commits 653, :tests 46, :repoqry "+repo:swanson/stringer", :name "swanson/stringer"}

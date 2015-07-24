@@ -1,0 +1,1 @@
+{:bugs 107, :commits 954, :tests 127, :repoqry "+repo:bumptech/glide", :name "bumptech/glide"}

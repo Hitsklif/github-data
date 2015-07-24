@@ -1,0 +1,1 @@
+{:bugs 24, :commits 1325, :tests 29, :repoqry "+repo:aspnetboilerplate/aspnetboilerplate", :name "aspnetboilerplate/aspnetboilerplate"}

@@ -1,0 +1,1 @@
+{:bugs 5, :commits 359, :tests 0, :repoqry "+repo:hybridauth/hybridauth", :name "hybridauth/hybridauth"}

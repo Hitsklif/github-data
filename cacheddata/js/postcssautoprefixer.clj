@@ -1,0 +1,1 @@
+{:bugs 51, :commits 1040, :tests 0, :repoqry "+repo:postcss/autoprefixer", :name "postcss/autoprefixer"}

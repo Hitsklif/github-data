@@ -1,0 +1,1 @@
+{:bugs 21, :commits 876, :tests 0, :repoqry "+repo:guillaumepotier/Parsley.js", :name "guillaumepotier/Parsley.js"}

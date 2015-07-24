@@ -1,0 +1,1 @@
+{:bugs 43, :commits 3189, :tests 34, :repoqry "+repo:taigaio/taiga-front", :name "taigaio/taiga-front"}

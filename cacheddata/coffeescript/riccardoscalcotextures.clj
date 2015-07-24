@@ -1,0 +1,1 @@
+{:bugs 0, :commits 36, :tests 0, :repoqry "+repo:riccardoscalco/textures", :name "riccardoscalco/textures"}

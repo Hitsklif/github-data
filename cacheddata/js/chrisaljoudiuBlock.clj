@@ -1,0 +1,1 @@
+{:bugs 1, :commits 2623, :tests 0, :repoqry "+repo:chrisaljoudi/uBlock", :name "chrisaljoudi/uBlock"}

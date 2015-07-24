@@ -1,0 +1,1 @@
+{:bugs 1087, :commits 4407, :tests 15, :repoqry "+repo:SignalR/SignalR", :name "SignalR/SignalR"}

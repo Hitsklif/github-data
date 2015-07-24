@@ -1,0 +1,1 @@
+{:bugs 0, :commits 365, :tests 0, :repoqry "+repo:codelucas/newspaper", :name "codelucas/newspaper"}

@@ -1,0 +1,1 @@
+{:bugs 90, :commits 2444, :tests 88, :repoqry "+repo:hashicorp/consul", :name "hashicorp/consul"}

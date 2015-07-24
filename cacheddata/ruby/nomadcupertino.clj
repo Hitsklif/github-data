@@ -1,0 +1,1 @@
+{:bugs 1, :commits 221, :tests 0, :repoqry "+repo:nomad/cupertino", :name "nomad/cupertino"}

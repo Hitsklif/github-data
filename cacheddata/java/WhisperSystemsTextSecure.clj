@@ -1,0 +1,1 @@
+{:bugs 385, :commits 1704, :tests 25, :repoqry "+repo:WhisperSystems/TextSecure", :name "WhisperSystems/TextSecure"}

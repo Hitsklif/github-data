@@ -1,0 +1,1 @@
+{:bugs 0, :commits 582, :tests 1, :repoqry "+repo:dungpa/fantomas", :name "dungpa/fantomas"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 331, :tests 19, :repoqry "+repo:ksoichiro/Android-ObservableScrollView", :name "ksoichiro/Android-ObservableScrollView"}

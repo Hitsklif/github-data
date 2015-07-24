@@ -1,0 +1,1 @@
+{:bugs 13, :commits 528, :tests 10, :repoqry "+repo:chaps-io/public_activity", :name "chaps-io/public_activity"}

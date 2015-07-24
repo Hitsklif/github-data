@@ -1,0 +1,1 @@
+{:bugs 1, :commits 368, :tests 11, :repoqry "+repo:rtyley/bfg-repo-cleaner", :name "rtyley/bfg-repo-cleaner"}

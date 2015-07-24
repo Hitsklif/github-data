@@ -1,0 +1,1 @@
+{:bugs 0, :commits 241, :tests 0, :repoqry "+repo:josephmisiti/awesome-machine-learning", :name "josephmisiti/awesome-machine-learning"}

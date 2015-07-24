@@ -1,0 +1,1 @@
+{:bugs 29, :commits 287, :tests 0, :repoqry "+repo:adobe-webplatform/Snap.svg", :name "adobe-webplatform/Snap.svg"}

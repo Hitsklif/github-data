@@ -1,0 +1,1 @@
+{:bugs 36, :commits 1533, :tests 7, :repoqry "+repo:fsharp/FSharp.Compiler.Service", :name "fsharp/FSharp.Compiler.Service"}

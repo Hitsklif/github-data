@@ -1,0 +1,1 @@
+{:bugs 0, :commits 66, :tests 1, :repoqry "+repo:stuartsierra/component", :name "stuartsierra/component"}

@@ -1,0 +1,1 @@
+{:bugs 45, :commits 4597, :tests 108, :repoqry "+repo:snowplow/snowplow", :name "snowplow/snowplow"}

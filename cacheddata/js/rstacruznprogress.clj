@@ -1,0 +1,1 @@
+{:bugs 0, :commits 188, :tests 1, :repoqry "+repo:rstacruz/nprogress", :name "rstacruz/nprogress"}

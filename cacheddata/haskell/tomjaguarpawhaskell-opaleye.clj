@@ -1,0 +1,1 @@
+{:bugs 2, :commits 59, :tests 1, :repoqry "+repo:tomjaguarpaw/haskell-opaleye", :name "tomjaguarpaw/haskell-opaleye"}

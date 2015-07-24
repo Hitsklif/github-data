@@ -1,0 +1,1 @@
+{:bugs 0, :commits 265, :tests 0, :repoqry "+repo:Paczesiowa/hsenv", :name "Paczesiowa/hsenv"}

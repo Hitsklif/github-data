@@ -1,0 +1,1 @@
+{:bugs 0, :commits 660, :tests 1, :repoqry "+repo:klen/python-mode", :name "klen/python-mode"}

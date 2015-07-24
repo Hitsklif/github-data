@@ -1,0 +1,1 @@
+{:bugs 0, :commits 4163, :tests 230, :repoqry "+repo:nhibernate/nhibernate-core", :name "nhibernate/nhibernate-core"}

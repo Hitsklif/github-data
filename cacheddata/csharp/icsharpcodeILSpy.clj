@@ -1,0 +1,1 @@
+{:bugs 66, :commits 1883, :tests 18, :repoqry "+repo:icsharpcode/ILSpy", :name "icsharpcode/ILSpy"}

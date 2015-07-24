@@ -1,0 +1,1 @@
+{:bugs 1, :commits 4079, :tests 2, :repoqry "+repo:laravel/laravel", :name "laravel/laravel"}

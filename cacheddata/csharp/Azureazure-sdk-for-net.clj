@@ -1,0 +1,1 @@
+{:bugs 1, :commits 2444, :tests 134, :repoqry "+repo:Azure/azure-sdk-for-net", :name "Azure/azure-sdk-for-net"}

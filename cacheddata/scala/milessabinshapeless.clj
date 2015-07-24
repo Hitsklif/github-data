@@ -1,0 +1,1 @@
+{:bugs 39, :commits 1235, :tests 0, :repoqry "+repo:milessabin/shapeless", :name "milessabin/shapeless"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 35, :tests 1, :repoqry "+repo:spring-projects/spring-scala", :name "spring-projects/spring-scala"}

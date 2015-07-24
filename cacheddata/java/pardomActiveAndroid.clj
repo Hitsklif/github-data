@@ -1,0 +1,1 @@
+{:bugs 0, :commits 163, :tests 13, :repoqry "+repo:pardom/ActiveAndroid", :name "pardom/ActiveAndroid"}

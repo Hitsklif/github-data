@@ -1,0 +1,1 @@
+{:bugs 0, :commits 144, :tests 2, :repoqry "+repo:rakyll/boom", :name "rakyll/boom"}

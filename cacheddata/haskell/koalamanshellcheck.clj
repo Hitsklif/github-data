@@ -1,0 +1,1 @@
+{:bugs 0, :commits 46, :tests 0, :repoqry "+repo:koalaman/shellcheck", :name "koalaman/shellcheck"}

@@ -1,0 +1,1 @@
+{:bugs 1, :commits 715, :tests 1, :repoqry "+repo:avelino/awesome-go", :name "avelino/awesome-go"}

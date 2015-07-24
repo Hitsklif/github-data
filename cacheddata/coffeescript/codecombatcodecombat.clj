@@ -1,0 +1,1 @@
+{:bugs 515, :commits 7357, :tests 67, :repoqry "+repo:codecombat/codecombat", :name "codecombat/codecombat"}

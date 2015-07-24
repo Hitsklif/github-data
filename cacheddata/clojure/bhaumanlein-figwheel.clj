@@ -1,0 +1,1 @@
+{:bugs 5, :commits 585, :tests 7, :repoqry "+repo:bhauman/lein-figwheel", :name "bhauman/lein-figwheel"}

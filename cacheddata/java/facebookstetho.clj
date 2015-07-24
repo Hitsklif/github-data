@@ -1,0 +1,1 @@
+{:bugs 20, :commits 235, :tests 7, :repoqry "+repo:facebook/stetho", :name "facebook/stetho"}

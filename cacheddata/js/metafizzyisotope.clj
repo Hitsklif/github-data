@@ -1,0 +1,1 @@
+{:bugs 18, :commits 761, :tests 0, :repoqry "+repo:metafizzy/isotope", :name "metafizzy/isotope"}

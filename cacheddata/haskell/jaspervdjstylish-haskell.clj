@@ -1,0 +1,1 @@
+{:bugs 10, :commits 182, :tests 1, :repoqry "+repo:jaspervdj/stylish-haskell", :name "jaspervdj/stylish-haskell"}

@@ -1,0 +1,1 @@
+{:bugs 17, :commits 424, :tests 1, :repoqry "+repo:shadowsocks/shadowsocks-csharp", :name "shadowsocks/shadowsocks-csharp"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 76, :tests 0, :repoqry "+repo:azzvx/gogotester", :name "azzvx/gogotester"}

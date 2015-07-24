@@ -1,0 +1,1 @@
+{:bugs 0, :commits 88, :tests 0, :repoqry "+repo:shadowsocks/shadowsocks-gui", :name "shadowsocks/shadowsocks-gui"}

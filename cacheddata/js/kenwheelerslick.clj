@@ -1,0 +1,1 @@
+{:bugs 32, :commits 528, :tests 0, :repoqry "+repo:kenwheeler/slick", :name "kenwheeler/slick"}

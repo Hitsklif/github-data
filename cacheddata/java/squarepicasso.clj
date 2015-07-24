@@ -1,0 +1,1 @@
+{:bugs 0, :commits 640, :tests 22, :repoqry "+repo:square/picasso", :name "square/picasso"}

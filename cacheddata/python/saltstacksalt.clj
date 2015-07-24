@@ -1,0 +1,1 @@
+{:bugs 3823, :commits 45652, :tests 451, :repoqry "+repo:saltstack/salt", :name "saltstack/salt"}

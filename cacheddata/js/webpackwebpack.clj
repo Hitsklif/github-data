@@ -1,0 +1,1 @@
+{:bugs 65, :commits 1381, :tests 26, :repoqry "+repo:webpack/webpack", :name "webpack/webpack"}

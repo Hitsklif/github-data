@@ -1,0 +1,1 @@
+{:bugs 9, :commits 83, :tests 0, :repoqry "+repo:resume/resume.github.com", :name "resume/resume.github.com"}

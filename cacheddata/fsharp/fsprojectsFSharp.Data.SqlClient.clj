@@ -1,0 +1,1 @@
+{:bugs 3, :commits 263, :tests 2, :repoqry "+repo:fsprojects/FSharp.Data.SqlClient", :name "fsprojects/FSharp.Data.SqlClient"}

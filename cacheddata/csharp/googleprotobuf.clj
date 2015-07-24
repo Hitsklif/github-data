@@ -1,0 +1,1 @@
+{:bugs 5, :commits 1314, :tests 39, :repoqry "+repo:google/protobuf", :name "google/protobuf"}

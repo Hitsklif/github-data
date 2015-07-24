@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1380, :tests 0, :repoqry "+repo:EsotericSoftware/spine-runtimes", :name "EsotericSoftware/spine-runtimes"}

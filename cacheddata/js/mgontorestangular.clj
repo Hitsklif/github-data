@@ -1,0 +1,1 @@
+{:bugs 64, :commits 622, :tests 1, :repoqry "+repo:mgonto/restangular", :name "mgonto/restangular"}

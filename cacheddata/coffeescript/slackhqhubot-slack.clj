@@ -1,0 +1,1 @@
+{:bugs 13, :commits 250, :tests 0, :repoqry "+repo:slackhq/hubot-slack", :name "slackhq/hubot-slack"}

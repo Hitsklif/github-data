@@ -1,0 +1,1 @@
+{:bugs 13, :commits 967, :tests 0, :repoqry "+repo:haskell-distributed/distributed-process", :name "haskell-distributed/distributed-process"}

@@ -1,0 +1,1 @@
+{:bugs 362, :commits 2699, :tests 178, :repoqry "+repo:scala-js/scala-js", :name "scala-js/scala-js"}

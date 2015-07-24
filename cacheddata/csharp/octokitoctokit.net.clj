@@ -1,0 +1,1 @@
+{:bugs 17, :commits 2581, :tests 7, :repoqry "+repo:octokit/octokit.net", :name "octokit/octokit.net"}

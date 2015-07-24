@@ -1,0 +1,1 @@
+{:bugs 17, :commits 940, :tests 0, :repoqry "+repo:LightTable/LightTable", :name "LightTable/LightTable"}

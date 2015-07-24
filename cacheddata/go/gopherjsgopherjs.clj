@@ -1,0 +1,1 @@
+{:bugs 10, :commits 1537, :tests 15, :repoqry "+repo:gopherjs/gopherjs", :name "gopherjs/gopherjs"}

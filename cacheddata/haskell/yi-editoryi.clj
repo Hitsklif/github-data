@@ -1,0 +1,1 @@
+{:bugs 318, :commits 2133, :tests 8, :repoqry "+repo:yi-editor/yi", :name "yi-editor/yi"}

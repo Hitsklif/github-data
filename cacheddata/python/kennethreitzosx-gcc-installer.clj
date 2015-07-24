@@ -1,0 +1,1 @@
+{:bugs 0, :commits 54, :tests 0, :repoqry "+repo:kennethreitz/osx-gcc-installer", :name "kennethreitz/osx-gcc-installer"}

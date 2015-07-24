@@ -1,0 +1,1 @@
+{:bugs 0, :commits 4451, :tests 63, :repoqry "+repo:factorie/factorie", :name "factorie/factorie"}

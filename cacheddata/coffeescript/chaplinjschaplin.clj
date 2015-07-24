@@ -1,0 +1,1 @@
+{:bugs 32, :commits 1515, :tests 15, :repoqry "+repo:chaplinjs/chaplin", :name "chaplinjs/chaplin"}

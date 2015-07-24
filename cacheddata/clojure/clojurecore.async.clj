@@ -1,0 +1,1 @@
+{:bugs 0, :commits 299, :tests 13, :repoqry "+repo:clojure/core.async", :name "clojure/core.async"}

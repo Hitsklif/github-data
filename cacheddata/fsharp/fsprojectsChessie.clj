@@ -1,0 +1,1 @@
+{:bugs 0, :commits 149, :tests 0, :repoqry "+repo:fsprojects/Chessie", :name "fsprojects/Chessie"}

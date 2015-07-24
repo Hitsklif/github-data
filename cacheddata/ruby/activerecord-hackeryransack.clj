@@ -1,0 +1,1 @@
+{:bugs 0, :commits 851, :tests 22, :repoqry "+repo:activerecord-hackery/ransack", :name "activerecord-hackery/ransack"}

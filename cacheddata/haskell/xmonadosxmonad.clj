@@ -1,0 +1,1 @@
+{:bugs 6, :commits 32, :tests 0, :repoqry "+repo:xmonad/osxmonad", :name "xmonad/osxmonad"}

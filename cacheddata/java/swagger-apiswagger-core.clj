@@ -1,0 +1,1 @@
+{:bugs 80, :commits 1567, :tests 18, :repoqry "+repo:swagger-api/swagger-core", :name "swagger-api/swagger-core"}

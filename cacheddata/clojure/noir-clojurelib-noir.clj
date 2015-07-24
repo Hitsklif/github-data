@@ -1,0 +1,1 @@
+{:bugs 0, :commits 349, :tests 3, :repoqry "+repo:noir-clojure/lib-noir", :name "noir-clojure/lib-noir"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 169, :tests 8, :repoqry "+repo:rbrush/clara-rules", :name "rbrush/clara-rules"}

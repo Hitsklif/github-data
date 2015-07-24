@@ -1,0 +1,1 @@
+{:bugs 6, :commits 203, :tests 1, :repoqry "+repo:fsprojects/FSharpCommunityTemplates", :name "fsprojects/FSharpCommunityTemplates"}

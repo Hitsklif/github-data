@@ -1,0 +1,1 @@
+{:bugs 0, :commits 871, :tests 14, :repoqry "+repo:clips/pattern", :name "clips/pattern"}

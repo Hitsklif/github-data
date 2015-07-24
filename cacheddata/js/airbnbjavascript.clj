@@ -1,0 +1,1 @@
+{:bugs 1, :commits 390, :tests 0, :repoqry "+repo:airbnb/javascript", :name "airbnb/javascript"}

@@ -1,0 +1,1 @@
+{:bugs 22, :commits 688, :tests 2, :repoqry "+repo:shadowsocks/shadowsocks", :name "shadowsocks/shadowsocks"}

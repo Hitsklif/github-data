@@ -1,0 +1,1 @@
+{:bugs 0, :commits 679, :tests 0, :repoqry "+repo:dmotz/oriDomi", :name "dmotz/oriDomi"}

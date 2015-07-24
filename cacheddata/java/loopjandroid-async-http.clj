@@ -1,0 +1,1 @@
+{:bugs 0, :commits 732, :tests 0, :repoqry "+repo:loopj/android-async-http", :name "loopj/android-async-http"}

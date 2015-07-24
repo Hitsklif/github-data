@@ -1,0 +1,1 @@
+{:bugs 15, :commits 94, :tests 0, :repoqry "+repo:PkmX/lcamera", :name "PkmX/lcamera"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 337, :tests 6, :repoqry "+repo:yieldbot/flambo", :name "yieldbot/flambo"}

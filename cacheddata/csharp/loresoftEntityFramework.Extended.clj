@@ -1,0 +1,1 @@
+{:bugs 0, :commits 145, :tests 15, :repoqry "+repo:loresoft/EntityFramework.Extended", :name "loresoft/EntityFramework.Extended"}

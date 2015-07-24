@@ -1,0 +1,1 @@
+{:bugs 0, :commits 13971, :tests 206, :repoqry "+repo:adobe/brackets", :name "adobe/brackets"}

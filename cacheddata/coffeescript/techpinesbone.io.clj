@@ -1,0 +1,1 @@
+{:bugs 0, :commits 131, :tests 1, :repoqry "+repo:techpines/bone.io", :name "techpines/bone.io"}

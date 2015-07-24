@@ -1,0 +1,1 @@
+{:bugs 4, :commits 850, :tests 0, :repoqry "+repo:koush/AndroidAsync", :name "koush/AndroidAsync"}

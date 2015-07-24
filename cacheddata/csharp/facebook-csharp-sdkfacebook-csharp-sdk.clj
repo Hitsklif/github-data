@@ -1,0 +1,1 @@
+{:bugs 28, :commits 1559, :tests 4, :repoqry "+repo:facebook-csharp-sdk/facebook-csharp-sdk", :name "facebook-csharp-sdk/facebook-csharp-sdk"}

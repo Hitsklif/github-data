@@ -1,0 +1,1 @@
+{:bugs 46, :commits 2614, :tests 285, :repoqry "+repo:AutoFixture/AutoFixture", :name "AutoFixture/AutoFixture"}

@@ -1,0 +1,1 @@
+{:bugs 40, :commits 814, :tests 0, :repoqry "+repo:eternicode/bootstrap-datepicker", :name "eternicode/bootstrap-datepicker"}

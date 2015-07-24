@@ -1,0 +1,1 @@
+{:bugs 15, :commits 1272, :tests 2, :repoqry "+repo:haskell/hackage-server", :name "haskell/hackage-server"}

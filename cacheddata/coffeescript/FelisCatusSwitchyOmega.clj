@@ -1,0 +1,1 @@
+{:bugs 15, :commits 257, :tests 4, :repoqry "+repo:FelisCatus/SwitchyOmega", :name "FelisCatus/SwitchyOmega"}

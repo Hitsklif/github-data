@@ -1,0 +1,1 @@
+{:bugs 30, :commits 731, :tests 1, :repoqry "+repo:enyo/dropzone", :name "enyo/dropzone"}

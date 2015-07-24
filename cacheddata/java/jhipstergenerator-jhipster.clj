@@ -1,0 +1,1 @@
+{:bugs 88, :commits 2505, :tests 8, :repoqry "+repo:jhipster/generator-jhipster", :name "jhipster/generator-jhipster"}

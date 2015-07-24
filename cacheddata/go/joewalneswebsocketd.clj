@@ -1,0 +1,1 @@
+{:bugs 6, :commits 176, :tests 3, :repoqry "+repo:joewalnes/websocketd", :name "joewalnes/websocketd"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 493, :tests 7, :repoqry "+repo:foursquare/rogue", :name "foursquare/rogue"}

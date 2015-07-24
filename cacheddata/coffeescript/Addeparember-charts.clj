@@ -1,0 +1,1 @@
+{:bugs 5, :commits 80, :tests 6, :repoqry "+repo:Addepar/ember-charts", :name "Addepar/ember-charts"}

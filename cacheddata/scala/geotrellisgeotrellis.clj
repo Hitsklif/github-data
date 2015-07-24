@@ -1,0 +1,1 @@
+{:bugs 14, :commits 3225, :tests 332, :repoqry "+repo:geotrellis/geotrellis", :name "geotrellis/geotrellis"}

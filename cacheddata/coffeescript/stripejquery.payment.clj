@@ -1,0 +1,1 @@
+{:bugs 0, :commits 166, :tests 0, :repoqry "+repo:stripe/jquery.payment", :name "stripe/jquery.payment"}

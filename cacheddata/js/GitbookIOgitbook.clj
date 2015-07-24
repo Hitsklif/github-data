@@ -1,0 +1,1 @@
+{:bugs 9, :commits 1310, :tests 0, :repoqry "+repo:GitbookIO/gitbook", :name "GitbookIO/gitbook"}

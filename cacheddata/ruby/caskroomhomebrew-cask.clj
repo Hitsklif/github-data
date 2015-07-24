@@ -1,0 +1,1 @@
+{:bugs 96, :commits 32548, :tests 56, :repoqry "+repo:caskroom/homebrew-cask", :name "caskroom/homebrew-cask"}

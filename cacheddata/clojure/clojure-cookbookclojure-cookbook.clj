@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1610, :tests 1, :repoqry "+repo:clojure-cookbook/clojure-cookbook", :name "clojure-cookbook/clojure-cookbook"}

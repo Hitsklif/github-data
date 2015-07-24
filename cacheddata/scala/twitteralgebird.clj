@@ -1,0 +1,1 @@
+{:bugs 2, :commits 889, :tests 24, :repoqry "+repo:twitter/algebird", :name "twitter/algebird"}

@@ -1,0 +1,1 @@
+{:bugs 2, :commits 545, :tests 16, :repoqry "+repo:binux/pyspider", :name "binux/pyspider"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 888, :tests 18, :repoqry "+repo:ankane/searchkick", :name "ankane/searchkick"}

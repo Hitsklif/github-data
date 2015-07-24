@@ -1,0 +1,1 @@
+{:bugs 0, :commits 715, :tests 0, :repoqry "+repo:xamarin/mobile-samples", :name "xamarin/mobile-samples"}

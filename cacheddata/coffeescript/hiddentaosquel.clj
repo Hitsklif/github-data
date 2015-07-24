@@ -1,0 +1,1 @@
+{:bugs 16, :commits 261, :tests 11, :repoqry "+repo:hiddentao/squel", :name "hiddentao/squel"}

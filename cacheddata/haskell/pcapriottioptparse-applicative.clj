@@ -1,0 +1,1 @@
+{:bugs 2, :commits 421, :tests 0, :repoqry "+repo:pcapriotti/optparse-applicative", :name "pcapriotti/optparse-applicative"}

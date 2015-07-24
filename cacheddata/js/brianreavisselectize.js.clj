@@ -1,0 +1,1 @@
+{:bugs 15, :commits 521, :tests 0, :repoqry "+repo:brianreavis/selectize.js", :name "brianreavis/selectize.js"}

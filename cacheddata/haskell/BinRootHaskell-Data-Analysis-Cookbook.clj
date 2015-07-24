@@ -1,0 +1,1 @@
+{:bugs 0, :commits 34, :tests 0, :repoqry "+repo:BinRoot/Haskell-Data-Analysis-Cookbook", :name "BinRoot/Haskell-Data-Analysis-Cookbook"}

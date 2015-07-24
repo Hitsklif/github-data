@@ -1,0 +1,1 @@
+{:bugs 0, :commits 536, :tests 162, :repoqry "+repo:rancher/os", :name "rancher/os"}

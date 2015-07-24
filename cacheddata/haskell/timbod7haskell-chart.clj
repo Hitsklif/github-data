@@ -1,0 +1,1 @@
+{:bugs 0, :commits 819, :tests 3, :repoqry "+repo:timbod7/haskell-chart", :name "timbod7/haskell-chart"}

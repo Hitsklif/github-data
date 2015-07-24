@@ -1,0 +1,1 @@
+{:bugs 45, :commits 2758, :tests 172, :repoqry "+repo:dropwizard/dropwizard", :name "dropwizard/dropwizard"}

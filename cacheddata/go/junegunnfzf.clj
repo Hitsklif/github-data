@@ -1,0 +1,1 @@
+{:bugs 27, :commits 716, :tests 15, :repoqry "+repo:junegunn/fzf", :name "junegunn/fzf"}

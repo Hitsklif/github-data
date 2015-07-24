@@ -1,0 +1,1 @@
+{:bugs 0, :commits 3870, :tests 255, :repoqry "+repo:scala-ide/scala-ide", :name "scala-ide/scala-ide"}

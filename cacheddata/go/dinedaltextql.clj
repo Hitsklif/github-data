@@ -1,0 +1,1 @@
+{:bugs 0, :commits 50, :tests 0, :repoqry "+repo:dinedal/textql", :name "dinedal/textql"}

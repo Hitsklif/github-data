@@ -1,0 +1,1 @@
+{:bugs 73, :commits 641, :tests 17, :repoqry "+repo:jkbrzt/httpie", :name "jkbrzt/httpie"}

@@ -1,0 +1,1 @@
+{:bugs 23, :commits 6353, :tests 36, :repoqry "+repo:Sonarr/Sonarr", :name "Sonarr/Sonarr"}

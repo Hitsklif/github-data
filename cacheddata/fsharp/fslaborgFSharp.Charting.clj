@@ -1,0 +1,1 @@
+{:bugs 2, :commits 151, :tests 0, :repoqry "+repo:fslaborg/FSharp.Charting", :name "fslaborg/FSharp.Charting"}

@@ -1,0 +1,1 @@
+{:bugs 11, :commits 1348, :tests 19, :repoqry "+repo:twitter/summingbird", :name "twitter/summingbird"}

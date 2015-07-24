@@ -1,0 +1,1 @@
+{:bugs 0, :commits 198, :tests 5, :repoqry "+repo:elabs/pundit", :name "elabs/pundit"}

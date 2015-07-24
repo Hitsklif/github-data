@@ -1,0 +1,1 @@
+{:bugs 7, :commits 153, :tests 0, :repoqry "+repo:jrudolph/sbt-dependency-graph", :name "jrudolph/sbt-dependency-graph"}

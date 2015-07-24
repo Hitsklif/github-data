@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1840, :tests 140, :repoqry "+repo:docker/swarm", :name "docker/swarm"}

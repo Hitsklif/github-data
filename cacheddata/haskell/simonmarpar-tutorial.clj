@@ -1,0 +1,1 @@
+{:bugs 0, :commits 68, :tests 2, :repoqry "+repo:simonmar/par-tutorial", :name "simonmar/par-tutorial"}

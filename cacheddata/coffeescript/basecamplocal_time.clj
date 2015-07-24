@@ -1,0 +1,1 @@
+{:bugs 0, :commits 80, :tests 6, :repoqry "+repo:basecamp/local_time", :name "basecamp/local_time"}

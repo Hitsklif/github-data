@@ -1,0 +1,1 @@
+{:bugs 0, :commits 97, :tests 0, :repoqry "+repo:jorgef/fsharpworkshop", :name "jorgef/fsharpworkshop"}

@@ -1,0 +1,1 @@
+{:bugs 1, :commits 687, :tests 0, :repoqry "+repo:CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers", :name "CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers"}

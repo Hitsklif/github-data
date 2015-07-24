@@ -1,0 +1,1 @@
+{:bugs 0, :commits 133, :tests 0, :repoqry "+repo:caiorss/Functional-Programming", :name "caiorss/Functional-Programming"}

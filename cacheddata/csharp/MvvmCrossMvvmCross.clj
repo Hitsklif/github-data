@@ -1,0 +1,1 @@
+{:bugs 91, :commits 2413, :tests 35, :repoqry "+repo:MvvmCross/MvvmCross", :name "MvvmCross/MvvmCross"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 55, :tests 2, :repoqry "+repo:laravel/lumen", :name "laravel/lumen"}

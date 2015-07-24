@@ -1,0 +1,1 @@
+{:bugs 60, :commits 1797, :tests 0, :repoqry "+repo:HangfireIO/Hangfire", :name "HangfireIO/Hangfire"}

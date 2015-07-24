@@ -1,0 +1,1 @@
+{:bugs 1, :commits 174, :tests 3, :repoqry "+repo:futurice/android-best-practices", :name "futurice/android-best-practices"}

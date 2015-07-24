@@ -1,0 +1,1 @@
+{:bugs 27, :commits 730, :tests 44, :repoqry "+repo:kamon-io/Kamon", :name "kamon-io/Kamon"}

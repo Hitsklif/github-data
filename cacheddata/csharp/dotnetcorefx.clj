@@ -1,0 +1,1 @@
+{:bugs 60, :commits 2711, :tests 210, :repoqry "+repo:dotnet/corefx", :name "dotnet/corefx"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 116, :tests 0, :repoqry "+repo:spray/sbt-revolver", :name "spray/sbt-revolver"}

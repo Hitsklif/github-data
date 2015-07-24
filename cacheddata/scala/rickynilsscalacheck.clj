@@ -1,0 +1,1 @@
+{:bugs 0, :commits 729, :tests 7, :repoqry "+repo:rickynils/scalacheck", :name "rickynils/scalacheck"}

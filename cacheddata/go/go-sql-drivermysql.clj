@@ -1,0 +1,1 @@
+{:bugs 33, :commits 558, :tests 4, :repoqry "+repo:go-sql-driver/mysql", :name "go-sql-driver/mysql"}

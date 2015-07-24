@@ -1,0 +1,1 @@
+{:bugs 1, :commits 391, :tests 0, :repoqry "+repo:tldr-pages/tldr", :name "tldr-pages/tldr"}

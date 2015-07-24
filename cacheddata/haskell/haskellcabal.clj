@@ -1,0 +1,1 @@
+{:bugs 740, :commits 5116, :tests 5, :repoqry "+repo:haskell/cabal", :name "haskell/cabal"}

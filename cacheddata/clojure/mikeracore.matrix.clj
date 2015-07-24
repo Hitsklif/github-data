@@ -1,0 +1,1 @@
+{:bugs 25, :commits 1931, :tests 21, :repoqry "+repo:mikera/core.matrix", :name "mikera/core.matrix"}

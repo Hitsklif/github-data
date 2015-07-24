@@ -1,0 +1,1 @@
+{:bugs 0, :commits 61, :tests 1, :repoqry "+repo:HubSpot/BuckyClient", :name "HubSpot/BuckyClient"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 465, :tests 0, :repoqry "+repo:chrisbanes/Android-PullToRefresh", :name "chrisbanes/Android-PullToRefresh"}

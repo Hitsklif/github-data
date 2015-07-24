@@ -1,0 +1,1 @@
+{:bugs 28, :commits 531, :tests 9, :repoqry "+repo:rails/spring", :name "rails/spring"}

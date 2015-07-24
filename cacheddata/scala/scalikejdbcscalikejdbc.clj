@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1571, :tests 71, :repoqry "+repo:scalikejdbc/scalikejdbc", :name "scalikejdbc/scalikejdbc"}

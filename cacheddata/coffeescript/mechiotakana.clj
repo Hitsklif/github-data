@@ -1,0 +1,1 @@
+{:bugs 1, :commits 168, :tests 1, :repoqry "+repo:mechio/takana", :name "mechio/takana"}

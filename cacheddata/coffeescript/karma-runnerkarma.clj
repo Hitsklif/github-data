@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1486, :tests 32, :repoqry "+repo:karma-runner/karma", :name "karma-runner/karma"}

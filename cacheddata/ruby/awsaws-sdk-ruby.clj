@@ -1,0 +1,1 @@
+{:bugs 30, :commits 2780, :tests 117, :repoqry "+repo:aws/aws-sdk-ruby", :name "aws/aws-sdk-ruby"}

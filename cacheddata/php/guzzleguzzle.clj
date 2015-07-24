@@ -1,0 +1,1 @@
+{:bugs 6, :commits 2532, :tests 24, :repoqry "+repo:guzzle/guzzle", :name "guzzle/guzzle"}

@@ -1,0 +1,1 @@
+{:bugs 5, :commits 491, :tests 2, :repoqry "+repo:jakubgarfield/Bonobo-Git-Server", :name "jakubgarfield/Bonobo-Git-Server"}

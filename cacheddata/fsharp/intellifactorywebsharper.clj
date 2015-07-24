@@ -1,0 +1,1 @@
+{:bugs 221, :commits 1195, :tests 0, :repoqry "+repo:intellifactory/websharper", :name "intellifactory/websharper"}

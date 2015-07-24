@@ -1,0 +1,1 @@
+{:bugs 37, :commits 1808, :tests 68, :repoqry "+repo:ruby-concurrency/concurrent-ruby", :name "ruby-concurrency/concurrent-ruby"}

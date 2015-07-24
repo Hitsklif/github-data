@@ -1,0 +1,1 @@
+{:bugs 6, :commits 123, :tests 1, :repoqry "+repo:sroze/ngInfiniteScroll", :name "sroze/ngInfiniteScroll"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 48, :tests 0, :repoqry "+repo:markjaquith/WordPress-Skeleton", :name "markjaquith/WordPress-Skeleton"}

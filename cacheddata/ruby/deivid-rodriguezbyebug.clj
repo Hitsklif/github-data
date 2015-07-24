@@ -1,0 +1,1 @@
+{:bugs 11, :commits 1603, :tests 45, :repoqry "+repo:deivid-rodriguez/byebug", :name "deivid-rodriguez/byebug"}

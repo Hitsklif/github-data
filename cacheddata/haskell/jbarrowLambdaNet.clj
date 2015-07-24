@@ -1,0 +1,1 @@
+{:bugs 0, :commits 294, :tests 3, :repoqry "+repo:jbarrow/LambdaNet", :name "jbarrow/LambdaNet"}

@@ -1,0 +1,1 @@
+{:bugs 3, :commits 264, :tests 23, :repoqry "+repo:etaty/rediscala", :name "etaty/rediscala"}

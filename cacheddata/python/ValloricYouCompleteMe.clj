@@ -1,0 +1,1 @@
+{:bugs 5, :commits 1394, :tests 4, :repoqry "+repo:Valloric/YouCompleteMe", :name "Valloric/YouCompleteMe"}

@@ -1,0 +1,1 @@
+{:bugs 44, :commits 1811, :tests 8, :repoqry "+repo:libgit2/libgit2sharp", :name "libgit2/libgit2sharp"}

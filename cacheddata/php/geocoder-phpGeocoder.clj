@@ -1,0 +1,1 @@
+{:bugs 22, :commits 840, :tests 31, :repoqry "+repo:geocoder-php/Geocoder", :name "geocoder-php/Geocoder"}

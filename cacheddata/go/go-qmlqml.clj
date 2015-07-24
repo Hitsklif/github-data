@@ -1,0 +1,1 @@
+{:bugs 0, :commits 340, :tests 2, :repoqry "+repo:go-qml/qml", :name "go-qml/qml"}

@@ -1,0 +1,1 @@
+{:bugs 3, :commits 279, :tests 2, :repoqry "+repo:mitchellh/vagrant-aws", :name "mitchellh/vagrant-aws"}

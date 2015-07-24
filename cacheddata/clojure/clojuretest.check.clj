@@ -1,0 +1,1 @@
+{:bugs 0, :commits 358, :tests 0, :repoqry "+repo:clojure/test.check", :name "clojure/test.check"}

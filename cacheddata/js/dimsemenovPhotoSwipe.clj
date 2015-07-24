@@ -1,0 +1,1 @@
+{:bugs 9, :commits 236, :tests 0, :repoqry "+repo:dimsemenov/PhotoSwipe", :name "dimsemenov/PhotoSwipe"}

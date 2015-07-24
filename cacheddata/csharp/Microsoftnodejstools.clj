@@ -1,0 +1,1 @@
+{:bugs 46, :commits 1205, :tests 40, :repoqry "+repo:Microsoft/nodejstools", :name "Microsoft/nodejstools"}

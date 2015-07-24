@@ -1,0 +1,1 @@
+{:bugs 0, :commits 222, :tests 6, :repoqry "+repo:agrafix/Spock", :name "agrafix/Spock"}

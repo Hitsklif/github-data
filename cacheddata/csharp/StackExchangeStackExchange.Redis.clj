@@ -1,0 +1,1 @@
+{:bugs 1, :commits 325, :tests 2, :repoqry "+repo:StackExchange/StackExchange.Redis", :name "StackExchange/StackExchange.Redis"}

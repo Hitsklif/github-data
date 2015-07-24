@@ -1,0 +1,1 @@
+{:bugs 1, :commits 47, :tests 0, :repoqry "+repo:bitc/hdevtools", :name "bitc/hdevtools"}

@@ -1,0 +1,1 @@
+{:bugs 712, :commits 2043, :tests 309, :repoqry "+repo:rapid7/metasploit-framework", :name "rapid7/metasploit-framework"}

@@ -1,0 +1,1 @@
+{:bugs 45, :commits 3236, :tests 1, :repoqry "+repo:elm-lang/elm-compiler", :name "elm-lang/elm-compiler"}

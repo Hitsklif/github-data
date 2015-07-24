@@ -1,0 +1,1 @@
+{:bugs 4, :commits 275, :tests 0, :repoqry "+repo:phusion/baseimage-docker", :name "phusion/baseimage-docker"}

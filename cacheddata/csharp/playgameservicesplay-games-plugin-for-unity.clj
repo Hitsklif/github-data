@@ -1,0 +1,1 @@
+{:bugs 22, :commits 119, :tests 2, :repoqry "+repo:playgameservices/play-games-plugin-for-unity", :name "playgameservices/play-games-plugin-for-unity"}

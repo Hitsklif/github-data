@@ -1,0 +1,1 @@
+{:bugs 32, :commits 1133, :tests 67, :repoqry "+repo:doorkeeper-gem/doorkeeper", :name "doorkeeper-gem/doorkeeper"}

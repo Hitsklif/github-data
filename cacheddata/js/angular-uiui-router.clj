@@ -1,0 +1,1 @@
+{:bugs 103, :commits 597, :tests 11, :repoqry "+repo:angular-ui/ui-router", :name "angular-ui/ui-router"}

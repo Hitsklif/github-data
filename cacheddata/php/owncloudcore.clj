@@ -1,0 +1,1 @@
+{:bugs 5201, :commits 24134, :tests 82, :repoqry "+repo:owncloud/core", :name "owncloud/core"}

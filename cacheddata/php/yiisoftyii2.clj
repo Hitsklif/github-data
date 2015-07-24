@@ -1,0 +1,1 @@
+{:bugs 0, :commits 11011, :tests 171, :repoqry "+repo:yiisoft/yii2", :name "yiisoft/yii2"}

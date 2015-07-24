@@ -1,0 +1,1 @@
+{:bugs 3, :commits 484, :tests 21, :repoqry "+repo:json4s/json4s", :name "json4s/json4s"}

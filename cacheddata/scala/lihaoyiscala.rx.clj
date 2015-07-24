@@ -1,0 +1,1 @@
+{:bugs 0, :commits 165, :tests 2, :repoqry "+repo:lihaoyi/scala.rx", :name "lihaoyi/scala.rx"}

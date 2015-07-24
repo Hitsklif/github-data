@@ -1,0 +1,1 @@
+{:bugs 5, :commits 382, :tests 41, :repoqry "+repo:mauricio/postgresql-async", :name "mauricio/postgresql-async"}

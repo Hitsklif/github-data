@@ -1,0 +1,1 @@
+{:bugs 0, :commits 3386, :tests 44, :repoqry "+repo:NuGet/NuGetGallery", :name "NuGet/NuGetGallery"}

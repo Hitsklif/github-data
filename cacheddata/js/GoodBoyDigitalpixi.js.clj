@@ -1,0 +1,1 @@
+{:bugs 285, :commits 2314, :tests 3, :repoqry "+repo:GoodBoyDigital/pixi.js", :name "GoodBoyDigital/pixi.js"}

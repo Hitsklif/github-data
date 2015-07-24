@@ -1,0 +1,1 @@
+{:bugs 0, :commits 2919, :tests 23, :repoqry "+repo:clojure/clojurescript", :name "clojure/clojurescript"}

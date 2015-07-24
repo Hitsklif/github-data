@@ -1,0 +1,1 @@
+{:bugs 0, :commits 0, :tests 6, :repoqry "+repo:autotelicum/Smooth-CoffeeScript", :name "autotelicum/Smooth-CoffeeScript"}

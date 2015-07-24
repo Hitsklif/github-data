@@ -1,0 +1,1 @@
+{:bugs 53, :commits 4170, :tests 17, :repoqry "+repo:ucsd-progsys/liquidhaskell", :name "ucsd-progsys/liquidhaskell"}

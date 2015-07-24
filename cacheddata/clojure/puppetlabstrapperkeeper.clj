@@ -1,0 +1,1 @@
+{:bugs 0, :commits 590, :tests 14, :repoqry "+repo:puppetlabs/trapperkeeper", :name "puppetlabs/trapperkeeper"}

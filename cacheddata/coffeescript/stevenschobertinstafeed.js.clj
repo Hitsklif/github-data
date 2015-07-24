@@ -1,0 +1,1 @@
+{:bugs 7, :commits 88, :tests 1, :repoqry "+repo:stevenschobert/instafeed.js", :name "stevenschobert/instafeed.js"}

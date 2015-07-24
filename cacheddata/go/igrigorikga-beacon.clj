@@ -1,0 +1,1 @@
+{:bugs 0, :commits 41, :tests 0, :repoqry "+repo:igrigorik/ga-beacon", :name "igrigorik/ga-beacon"}

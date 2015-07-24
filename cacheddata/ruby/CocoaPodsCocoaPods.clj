@@ -1,0 +1,1 @@
+{:bugs 0, :commits 4682, :tests 80, :repoqry "+repo:CocoaPods/CocoaPods", :name "CocoaPods/CocoaPods"}

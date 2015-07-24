@@ -1,0 +1,1 @@
+{:bugs 0, :commits 239, :tests 2, :repoqry "+repo:JakeWharton/ViewPagerIndicator", :name "JakeWharton/ViewPagerIndicator"}

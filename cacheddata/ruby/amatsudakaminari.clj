@@ -1,0 +1,1 @@
+{:bugs 46, :commits 809, :tests 15, :repoqry "+repo:amatsuda/kaminari", :name "amatsuda/kaminari"}

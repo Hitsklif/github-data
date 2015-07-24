@@ -1,0 +1,1 @@
+{:bugs 0, :commits 182, :tests 1, :repoqry "+repo:thearn/webcam-pulse-detector", :name "thearn/webcam-pulse-detector"}

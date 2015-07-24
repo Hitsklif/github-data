@@ -1,0 +1,1 @@
+{:bugs 0, :commits 376, :tests 2, :repoqry "+repo:CaryLandholt/AngularFun", :name "CaryLandholt/AngularFun"}

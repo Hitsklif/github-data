@@ -1,0 +1,1 @@
+{:bugs 56, :commits 791, :tests 0, :repoqry "+repo:mikepenz/MaterialDrawer", :name "mikepenz/MaterialDrawer"}

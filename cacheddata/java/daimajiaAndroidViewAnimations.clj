@@ -1,0 +1,1 @@
+{:bugs 0, :commits 112, :tests 0, :repoqry "+repo:daimajia/AndroidViewAnimations", :name "daimajia/AndroidViewAnimations"}

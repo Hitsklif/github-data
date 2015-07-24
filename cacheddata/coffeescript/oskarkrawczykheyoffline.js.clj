@@ -1,0 +1,1 @@
+{:bugs 0, :commits 33, :tests 0, :repoqry "+repo:oskarkrawczyk/heyoffline.js", :name "oskarkrawczyk/heyoffline.js"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 111, :tests 1, :repoqry "+repo:bevry/cson", :name "bevry/cson"}

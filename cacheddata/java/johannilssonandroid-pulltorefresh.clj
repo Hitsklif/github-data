@@ -1,0 +1,1 @@
+{:bugs 0, :commits 97, :tests 0, :repoqry "+repo:johannilsson/android-pulltorefresh", :name "johannilsson/android-pulltorefresh"}

@@ -1,0 +1,1 @@
+{:bugs 22, :commits 1284, :tests 25, :repoqry "+repo:scalaz/scalaz-stream", :name "scalaz/scalaz-stream"}

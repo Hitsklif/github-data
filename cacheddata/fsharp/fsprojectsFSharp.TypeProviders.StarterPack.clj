@@ -1,0 +1,1 @@
+{:bugs 2, :commits 93, :tests 0, :repoqry "+repo:fsprojects/FSharp.TypeProviders.StarterPack", :name "fsprojects/FSharp.TypeProviders.StarterPack"}

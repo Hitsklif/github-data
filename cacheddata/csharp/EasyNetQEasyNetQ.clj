@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1097, :tests 12, :repoqry "+repo:EasyNetQ/EasyNetQ", :name "EasyNetQ/EasyNetQ"}

@@ -1,0 +1,1 @@
+{:bugs 0, :commits 407, :tests 18, :repoqry "+repo:google/hesokuri", :name "google/hesokuri"}

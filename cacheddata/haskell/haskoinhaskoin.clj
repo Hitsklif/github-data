@@ -1,0 +1,1 @@
+{:bugs 1, :commits 531, :tests 1, :repoqry "+repo:haskoin/haskoin", :name "haskoin/haskoin"}

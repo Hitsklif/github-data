@@ -1,0 +1,1 @@
+{:bugs 50, :commits 1643, :tests 0, :repoqry "+repo:ecomfe/echarts", :name "ecomfe/echarts"}

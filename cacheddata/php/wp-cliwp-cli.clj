@@ -1,0 +1,1 @@
+{:bugs 193, :commits 4084, :tests 9, :repoqry "+repo:wp-cli/wp-cli", :name "wp-cli/wp-cli"}

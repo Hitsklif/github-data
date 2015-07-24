@@ -1,0 +1,1 @@
+{:bugs 149, :commits 2242, :tests 20, :repoqry "+repo:takezoe/gitbucket", :name "takezoe/gitbucket"}

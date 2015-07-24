@@ -1,0 +1,1 @@
+{:bugs 379, :commits 6716, :tests 3, :repoqry "+repo:sqlmapproject/sqlmap", :name "sqlmapproject/sqlmap"}

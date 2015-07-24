@@ -1,0 +1,1 @@
+{:bugs 5, :commits 241, :tests 0, :repoqry "+repo:zeromq/fszmq", :name "zeromq/fszmq"}

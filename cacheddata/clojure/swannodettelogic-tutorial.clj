@@ -1,0 +1,1 @@
+{:bugs 0, :commits 67, :tests 0, :repoqry "+repo:swannodette/logic-tutorial", :name "swannodette/logic-tutorial"}

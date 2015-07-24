@@ -1,0 +1,1 @@
+{:bugs 269, :commits 1630, :tests 5, :repoqry "+repo:autofac/Autofac", :name "autofac/Autofac"}

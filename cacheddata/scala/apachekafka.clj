@@ -1,0 +1,1 @@
+{:bugs 0, :commits 658, :tests 100, :repoqry "+repo:apache/kafka", :name "apache/kafka"}

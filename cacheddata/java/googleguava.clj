@@ -1,0 +1,1 @@
+{:bugs 0, :commits 2086, :tests 727, :repoqry "+repo:google/guava", :name "google/guava"}

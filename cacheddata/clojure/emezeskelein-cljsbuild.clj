@@ -1,0 +1,1 @@
+{:bugs 0, :commits 459, :tests 4, :repoqry "+repo:emezeske/lein-cljsbuild", :name "emezeske/lein-cljsbuild"}

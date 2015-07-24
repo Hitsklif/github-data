@@ -1,0 +1,1 @@
+{:bugs 17, :commits 99, :tests 0, :repoqry "+repo:etsy/AndroidStaggeredGrid", :name "etsy/AndroidStaggeredGrid"}

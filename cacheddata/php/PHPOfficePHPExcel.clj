@@ -1,0 +1,1 @@
+{:bugs 0, :commits 1078, :tests 40, :repoqry "+repo:PHPOffice/PHPExcel", :name "PHPOffice/PHPExcel"}

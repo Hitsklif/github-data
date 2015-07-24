@@ -1,0 +1,1 @@
+{:bugs 8, :commits 149, :tests 0, :repoqry "+repo:facebook/chisel", :name "facebook/chisel"}

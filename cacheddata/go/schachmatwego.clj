@@ -1,0 +1,1 @@
+{:bugs 4, :commits 47, :tests 0, :repoqry "+repo:schachmat/wego", :name "schachmat/wego"}

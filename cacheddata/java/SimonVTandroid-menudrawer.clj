@@ -1,0 +1,1 @@
+{:bugs 0, :commits 208, :tests 0, :repoqry "+repo:SimonVT/android-menudrawer", :name "SimonVT/android-menudrawer"}

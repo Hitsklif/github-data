@@ -1,0 +1,1 @@
+{:bugs 0, :commits 227, :tests 6, :repoqry "+repo:nscala-time/nscala-time", :name "nscala-time/nscala-time"}

@@ -1,0 +1,1 @@
+{:bugs 66, :commits 232, :tests 0, :repoqry "+repo:nnnick/Chart.js", :name "nnnick/Chart.js"}

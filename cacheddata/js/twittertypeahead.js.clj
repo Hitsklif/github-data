@@ -1,0 +1,1 @@
+{:bugs 25, :commits 547, :tests 19, :repoqry "+repo:twitter/typeahead.js", :name "twitter/typeahead.js"}

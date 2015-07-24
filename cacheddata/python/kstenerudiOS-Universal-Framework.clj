@@ -1,0 +1,1 @@
+{:bugs 0, :commits 86, :tests 0, :repoqry "+repo:kstenerud/iOS-Universal-Framework", :name "kstenerud/iOS-Universal-Framework"}

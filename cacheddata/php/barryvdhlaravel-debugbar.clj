@@ -1,0 +1,1 @@
+{:bugs 0, :commits 411, :tests 0, :repoqry "+repo:barryvdh/laravel-debugbar", :name "barryvdh/laravel-debugbar"}

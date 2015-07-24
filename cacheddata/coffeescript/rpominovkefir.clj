@@ -1,0 +1,1 @@
+{:bugs 2, :commits 868, :tests 1, :repoqry "+repo:rpominov/kefir", :name "rpominov/kefir"}

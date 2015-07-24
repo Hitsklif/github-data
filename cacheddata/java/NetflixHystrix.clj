@@ -1,0 +1,1 @@
+{:bugs 16, :commits 1046, :tests 46, :repoqry "+repo:Netflix/Hystrix", :name "Netflix/Hystrix"}

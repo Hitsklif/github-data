@@ -1,0 +1,1 @@
+{:bugs 1, :commits 407, :tests 19, :repoqry "+repo:playframework/play-slick", :name "playframework/play-slick"}

@@ -1,0 +1,1 @@
+{:bugs 3, :commits 221, :tests 2, :repoqry "+repo:t2v/play2-auth", :name "t2v/play2-auth"}

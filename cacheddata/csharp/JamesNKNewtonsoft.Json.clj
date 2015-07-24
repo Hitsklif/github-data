@@ -1,0 +1,1 @@
+{:bugs 0, :commits 970, :tests 33, :repoqry "+repo:JamesNK/Newtonsoft.Json", :name "JamesNK/Newtonsoft.Json"}

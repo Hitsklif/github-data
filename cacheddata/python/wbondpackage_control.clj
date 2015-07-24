@@ -1,0 +1,1 @@
+{:bugs 50, :commits 832, :tests 0, :repoqry "+repo:wbond/package_control", :name "wbond/package_control"}
