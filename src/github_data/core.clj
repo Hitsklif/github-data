@@ -167,14 +167,17 @@
                               test-count (:tests repo)
                               commit-count (:commits repo)
                               bug-and-test-commit-ratio (float (/ (+ bug-count test-count)))
-                              ratiocommits (int (* 10000 (/ bug-count commit-count)))
-                              testspercommit (int (* 10000 (/ test-count commit-count)))]
+                              ratiocommits (float (/ bug-count commit-count))
+                              testspercommit  (float (/ test-count commit-count))]
                           (merge repo {:bug-and-test-commit-ratio bug-and-test-commit-ratio :tests-commits-ratio testspercommit :bug-commit-ratio ratiocommits})))
                       not-zero)
 
            not-zero (take-interquartile :bug-commit-ratio repo-data)
 
+           min-bug-ratio (reduce min (map :bug-commit-ratio not-zero))
+           max-bug-ratio (reduce max (map :bug-commit-ratio not-zero))
            bug-count (reduce + (map :bugs not-zero))
+
            test-count (reduce + (map :tests not-zero))
            commit-count (reduce + (map :commits not-zero))
            bug-repo-ratio (float (/ bug-count repo-count))
@@ -183,27 +186,87 @@
            ratiocommits  (float (/ bug-count commit-count))
            testspercommit (float (/ test-count commit-count))
            ]
-       {:name name :bugs bug-count :test test-count :commits commit-count :total-repos total-repos :score score :repos repo-count :bug-and-test-commit-ratio bug-and-test-commit-ratio :tests-commits-ratio testspercommit :bug-commit-ratio ratiocommits}))
+       {:name name :max-bug-ratio max-bug-ratio :min-bug-ratio min-bug-ratio :bugs bug-count :test test-count :commits commit-count :total-repos total-repos :score score :repos repo-count :bug-and-test-commit-ratio bug-and-test-commit-ratio :tests-commits-ratio testspercommit :bug-commit-ratio ratiocommits}))
    ;;bugs-many-paged
    clean-data
    langs
    (list 3, 9,  3,  -3, -2,  6,  -1,  3,  3,  10,  -2,  -2,)
    (list 307572,4180,30257,1475201,49716,49937,630816,75802,1224939,37328,826600,721979)
    ))
-(json/write-str data-cleaned)
 
+(map (fn [l] [(:name l) (:tests-commits-ratio l) (:bug-commit-ratio l)])
+     (sort-by :bug-and-test-commit-ratio data-cleaned))
+(
+["clojure" 0.00876137 0.011503478] 
+["fsharp" 0.0014933478 0.023486288] 
+["haskell" 0.0026110662 0.015551204] 
+["js" 0.0027743443 0.039445132] 
+["python" 0.019477962 0.02531419] 
+["ruby" 0.03903771 0.020303702] 
+["scala" 0.04074265 0.01904762] 
+["csharp" 0.017439904 0.03261284] 
+["java" 0.033524733 0.032567736] 
+["coffeescript" 0.007376024 0.047242288] 
+["go" 0.050468475 0.024698375] 
+["php" 0.07703413 0.031669293])
+
+(
+["fsharp" 0.0014933478] 
+["haskell" 0.0026110662] 
+["js" 0.0027743443] 
+["coffeescript" 0.007376024] 
+["clojure" 0.00876137] 
+["csharp" 0.017439904] 
+["python" 0.019477962] 
+["java" 0.033524733] 
+["ruby" 0.03903771] 
+["scala" 0.04074265] 
+["go" 0.050468475] 
+["php" 0.07703413])
+
+
+;; (json/write-str data-cleaned)
+(defn output-R-frame-by-lang []
+  (let [sorted (sort-by :score data-cleaned)
+        ratios  (clojure.string/join ","  (map :bug-commit-ratio sorted)) 
+        minratios  (clojure.string/join ","  (map :min-bug-ratio sorted)) 
+        maxratios  (clojure.string/join ","  (map :max-bug-ratio sorted))
+        names  (clojure.string/join ","  (map :name sorted))
+        output (str names "\n" ratios "\n" minratios "\n" maxratios)]
+    (spit "/home/jack/programming/datasciencecoursera/langugagedata2.csv" output)
+    names))
+(output-R-frame-by-lang)
+
+
+(defn output-R-frame []
+  (spit "/home/jack/programming/datasciencecoursera/langugagedata.csv" 
+        (reduce str
+                "name, ratio, score,totalrepo, minratio, maxratio"
+                (map (fn [lang]
+                           (let [
+                                 ratios (:bug-commit-ratio lang)
+                                 minratios (:min-bug-ratio lang)
+                                 maxratios (:max-bug-ratio lang)
+                                 names (:name lang)
+                                 scores (:score lang)
+                                 total-repos (:total-repos lang)
+                                 output (str names "," ratios "," scores "," total-repos "," minratios "," maxratios "\n")]
+                             output))
+                         (sort-by :score data-cleaned)))))
+(output-R-frame)
 
 (defn output-R []
   (let [sorted (sort-by :score data-cleaned)
         ratios (str "bugratios <- rescale(c" (toR (map :bug-commit-ratio sorted)) ")")
+        minratios (str "minbugratios <- rescale(c" (toR (map :min-bug-ratio sorted)) ")")
+        maxratios (str "maxbugratios <- rescale(c" (toR (map :max-bug-ratio sorted)) ")")
         names  (str "names <- c" (toR (map #(str "'" (:name %) "'") sorted)))
         scores (str "newscores <- rescale(c" (toR (map :score sorted)) ")")
         total-repos (str "repos <- rescale(c" (toR (map :total-repos sorted)) ")")
-        output (str ratios "\n" names "\n" scores "\n" total-repos)]
+        output (str ratios "\n" names "\n" scores "\n" total-repos "\n" minratios "\n" maxratios)]
     (spit "/home/jack/programming/datasciencecoursera/langugagedata.R" output)
     names))
 
-(output-R)
 
 
 (def all_repo_counts (map #(get-count-q (str repo_count %)) langs))
